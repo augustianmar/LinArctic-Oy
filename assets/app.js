@@ -2,10 +2,6 @@ const header = document.querySelector('.site-header');
 const menuButton = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('.mobile-nav');
 
-const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
-onScroll();
-window.addEventListener('scroll', onScroll, { passive: true });
-
 menuButton?.addEventListener('click', () => {
   const open = mobileNav.classList.toggle('is-open');
   menuButton.setAttribute('aria-expanded', String(open));
@@ -25,6 +21,6 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));

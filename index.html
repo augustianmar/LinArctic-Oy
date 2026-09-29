@@ -3,25 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f4ed">
-  <meta name="description" content="LinArctic Oy is a Lapland-rooted consulting company working across tourism, energy management, forestry, renewable resources and international partnerships.">
-  <title>LinArctic Oy — Rooted in the North</title>
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="LinArctic Oy is a Rovaniemi-based Finnish consulting and development company working in international development consulting and tourism services.">
+  <title>LinArctic Oy — Northern Expertise · International Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <span>Rovaniemi · Lapland · Finland</span>
+      <span>Established 2018 · Business ID 2956277-9</span>
+    </div>
+  </div>
+
   <header class="site-header" id="top">
     <div class="nav-shell">
-      <nav class="nav-side nav-left" aria-label="Primary left navigation">
-        <a href="#top">Home</a>
-        <a href="#company">Company</a>
+      <nav class="nav-left" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">What we do</a>
+        <a href="#team">Team</a>
       </nav>
 
       <a class="brand" href="#top" aria-label="LinArctic Oy home">
-        <img src="./assets/linarctic-logo.png" alt="LinArctic Oy">
+        <img src="./assets/linarctic-logo.svg" alt="LinArctic Oy">
       </a>
 
-      <nav class="nav-side nav-right" aria-label="Primary right navigation">
-        <a href="#expertise">Expertise</a>
+      <nav class="nav-right" aria-label="Secondary navigation">
+        <a href="#current">Current work</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -29,119 +40,281 @@
         <span></span><span></span>
       </button>
     </div>
+
     <nav class="mobile-nav" aria-label="Mobile navigation">
-      <a href="#top">Home</a>
-      <a href="#company">Company</a>
-      <a href="#expertise">Expertise</a>
+      <a href="#about">About</a>
+      <a href="#work">What we do</a>
+      <a href="#team">Team</a>
+      <a href="#current">Current work</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy reveal">
-        <p class="kicker">LAPLAND · FINLAND · INTERNATIONAL</p>
-        <h1 id="hero-title">Rooted in the North.<br><em>Built for what comes next.</em></h1>
-        <p class="hero-intro">LinArctic Oy is a consulting company with roots in tourism, energy management, forestry and renewable resources — bringing northern experience into practical development, partnerships and international projects.</p>
-      </div>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">NORTHERN EXPERTISE · INTERNATIONAL DEVELOPMENT</p>
+          <h1>Rooted in Lapland.<br><span>Connected internationally.</span></h1>
+          <p class="hero-lead">
+            LinArctic Oy is a Finnish consulting and development company based in Rovaniemi, Lapland.
+            We work in international development consulting and tourism services, combining a northern
+            operating base with long-standing experience in Southeast Asia.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#about">Discover LinArctic <span>↘</span></a>
+            <a class="text-link" href="#contact">Start a conversation</a>
+          </div>
+        </div>
 
-      <div class="hero-visual reveal" aria-label="LinArctic northern landscape identity">
-        <div class="visual-glow"></div>
-        <img src="./assets/linarctic-mark.png" alt="" aria-hidden="true">
-        <div class="visual-caption">
-          <span>FOREST</span>
-          <i></i>
-          <span>ARCTIC</span>
+        <div class="hero-logo reveal">
+          <img src="./assets/linarctic-logo.svg" alt="LinArctic Oy identity">
         </div>
       </div>
 
-      <a class="scroll-cue" href="#expertise">Explore LinArctic <span>↓</span></a>
+      <div class="hero-summary">
+        <article>
+          <span>Who we are</span>
+          <p>Rovaniemi-based Finnish consulting and development company established in 2018.</p>
+        </article>
+        <article>
+          <span>What we do</span>
+          <p>International development consulting, tourism services, programme development and partnership building.</p>
+        </article>
+        <article>
+          <span>International perspective</span>
+          <p>Based in Finland, with owner-level experience built over nearly two decades of work in Southeast Asia.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="statement" id="company">
-      <div class="section-shell statement-grid">
-        <p class="section-number">01 / COMPANY</p>
-        <div class="statement-copy reveal">
-          <p class="lead">Northern industries are interconnected. Tourism depends on place. Energy depends on resources. Forestry depends on long-term stewardship. International growth depends on trusted relationships.</p>
-          <p>LinArctic works where these worlds meet — developing programmes, partnerships and commercial opportunities with an emphasis on practical execution, local knowledge and sustainable long-term value.</p>
+    <section class="intro section" id="about">
+      <div class="section-grid">
+        <div class="section-label">
+          <span>01</span>
+          <p>About LinArctic</p>
         </div>
-      </div>
-    </section>
-
-    <section class="expertise" id="expertise">
-      <div class="section-shell">
-        <div class="section-head reveal">
-          <p class="section-number">02 / EXPERTISE</p>
-          <h2>Four roots.<br><em>One northern perspective.</em></h2>
-        </div>
-
-        <div class="expertise-grid">
-          <article class="expertise-card reveal">
-            <span>01</span>
-            <h3>Tourism & Destination Development</h3>
-            <p>Partnerships, product development and international market connections grounded in the realities of Lapland and northern tourism.</p>
-          </article>
-          <article class="expertise-card reveal">
-            <span>02</span>
-            <h3>Energy Management</h3>
-            <p>Development thinking around energy use, operating environments and resource-conscious solutions for organisations and projects.</p>
-          </article>
-          <article class="expertise-card reveal">
-            <span>03</span>
-            <h3>Forestry & Natural Resources</h3>
-            <p>Commercial and development perspectives shaped by forestry, land-based industries and the value created from northern resources.</p>
-          </article>
-          <article class="expertise-card reveal">
-            <span>04</span>
-            <h3>Renewable Resources & Partnerships</h3>
-            <p>Connecting people, organisations and opportunities around renewable resources, internationalisation and long-term development.</p>
-          </article>
+        <div class="intro-main reveal">
+          <h2>From northern expertise to structured international cooperation.</h2>
+          <p class="large-copy">
+            Established in 2018, LinArctic Oy operates in international development consulting and tourism services.
+            The company’s owners bring nearly two decades of working experience in Southeast Asia.
+          </p>
+          <p>
+            LinArctic develops international programmes, builds partnerships and coordinates cooperation with companies,
+            educational institutions, public-sector actors and other organisations. Our work is grounded in practical
+            implementation, trusted relationships and an understanding of different operating environments.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="approach">
-      <div class="section-shell approach-grid">
-        <div class="approach-title reveal">
-          <p class="section-number">03 / APPROACH</p>
-          <h2>Quietly ambitious.<br><em>Practically built.</em></h2>
+    <section class="work section" id="work">
+      <div class="section-grid">
+        <div class="section-label light">
+          <span>02</span>
+          <p>What we do</p>
         </div>
-        <div class="approach-copy reveal">
-          <div class="approach-row"><strong>Understand</strong><span>Read the operating environment before defining the opportunity.</span></div>
-          <div class="approach-row"><strong>Connect</strong><span>Bring together the right people, expertise and commercial interests.</span></div>
-          <div class="approach-row"><strong>Develop</strong><span>Turn the relationship into a structured project, programme or business case.</span></div>
-          <div class="approach-row"><strong>Deliver</strong><span>Keep the work grounded in clear responsibilities and usable outcomes.</span></div>
+        <div class="work-main">
+          <div class="section-heading reveal">
+            <p class="eyebrow light-text">LINARCTIC CAPABILITIES</p>
+            <h2>Development work backed by real sector expertise.</h2>
+          </div>
+
+          <div class="capabilities">
+            <article class="capability reveal">
+              <span>01</span>
+              <div>
+                <h3>International Development & Partnerships</h3>
+                <p>Programme planning, project development and cooperation building between organisations in Finland and international markets.</p>
+              </div>
+            </article>
+
+            <article class="capability reveal">
+              <span>02</span>
+              <div>
+                <h3>Tourism Services & Study Visits</h3>
+                <p>Development and coordination of international visits and programmes in Finland, including educational and study-oriented concepts.</p>
+              </div>
+            </article>
+
+            <article class="capability reveal">
+              <span>03</span>
+              <div>
+                <h3>Forestry & Natural Resources</h3>
+                <p>Senior expertise in forestry, sustainable natural-resource management, governance, forest carbon, social forestry and international development programmes.</p>
+              </div>
+            </article>
+
+            <article class="capability reveal">
+              <span>04</span>
+              <div>
+                <h3>Energy Efficiency & Building Systems</h3>
+                <p>Practical expertise in energy certificates, energy calculations, building technology and energy-efficiency improvement.</p>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="north-note">
-      <div class="north-note-inner reveal">
-        <img src="./assets/linarctic-mark.png" alt="" aria-hidden="true">
-        <blockquote>“The North is not a theme. It is the operating environment.”</blockquote>
+    <section class="current section" id="current">
+      <div class="section-grid">
+        <div class="section-label">
+          <span>03</span>
+          <p>Current work</p>
+        </div>
+
+        <div class="current-main">
+          <div class="current-kicker reveal">IN DEVELOPMENT</div>
+          <h2 class="reveal">Indonesia–Lapland Study Camp Programme</h2>
+          <p class="large-copy reveal">
+            A current LinArctic development focus is the concept, structure and cooperation network for a comprehensive
+            Indonesia–Lapland Study Camp Programme to be implemented in Finland.
+          </p>
+
+          <div class="current-details reveal">
+            <div>
+              <span>Programme development</span>
+              <p>Concept design, structure and international coordination.</p>
+            </div>
+            <div>
+              <span>Partnership network</span>
+              <p>Cooperation with educational institutions, companies, public-sector actors and other organisations.</p>
+            </div>
+            <div>
+              <span>Study visits</span>
+              <p>Planning of other international study visits under the LinArctic umbrella.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="section-shell contact-grid">
-        <div class="reveal">
-          <p class="section-number">04 / CONTACT</p>
-          <h2>Start with a conversation.</h2>
+    <section class="team section" id="team">
+      <div class="section-grid">
+        <div class="section-label">
+          <span>04</span>
+          <p>Our team</p>
         </div>
-        <div class="contact-side reveal">
-          <p>For consulting, project development, partnerships and international cooperation.</p>
-          <a class="contact-link" href="mailto:info@linarctic.com">info@linarctic.com <span>↗</span></a>
-          <small>Rovaniemi · Lapland · Finland</small>
+
+        <div class="team-main">
+          <div class="section-heading reveal">
+            <p class="eyebrow">EXPERIENCE ACROSS SECTORS AND MARKETS</p>
+            <h2>People behind LinArctic.</h2>
+          </div>
+
+          <div class="team-list">
+            <article class="person reveal">
+              <div class="person-index">01</div>
+              <div class="person-name">
+                <h3>Juhani Härkönen</h3>
+                <p>CEO & Chairman of the Board</p>
+              </div>
+              <div class="person-bio">
+                <p>
+                  Forestry and natural-resource management specialist with more than 27 years of professional experience
+                  in Finland and international assignments. His background includes sustainable forest management,
+                  governance, climate-change mitigation and adaptation, forest carbon, REDD+, social forestry,
+                  watershed management and forestry policy.
+                </p>
+                <p>
+                  His international career includes more than two decades of overseas work, including extensive experience
+                  in Indonesia and assignments elsewhere in Asia and Africa.
+                </p>
+              </div>
+            </article>
+
+            <article class="person reveal">
+              <div class="person-index">02</div>
+              <div class="person-name">
+                <h3>Mikko Ruokanen</h3>
+                <p>Energy Efficiency & Building Systems</p>
+              </div>
+              <div class="person-bio">
+                <p>
+                  Energy-efficiency and building-systems specialist with experience dating from 2013 in energy certificates,
+                  energy calculations and energy-efficiency improvement.
+                </p>
+                <p>
+                  His technical background covers building solutions, building services and building electronics, bringing
+                  a practical engineering perspective to LinArctic’s consulting capabilities.
+                </p>
+              </div>
+            </article>
+
+            <article class="person reveal">
+              <div class="person-index">03</div>
+              <div class="person-name">
+                <h3>Augustian Härkönen</h3>
+                <p>Indonesia–Finland Cooperation Coordinator & Programme Developer</p>
+              </div>
+              <div class="person-bio">
+                <p>
+                  Focuses on international programme development and partnership building between Finland and Indonesia.
+                  His responsibilities include planning and coordinating new programmes and projects, and building
+                  cooperation with companies, educational institutions, public-sector actors and other organisations.
+                </p>
+                <p>
+                  His current work includes development of the Indonesia–Lapland Study Camp Programme and other
+                  international study-visit concepts. He is also a shareholder of LinArctic Oy.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-strip">
+      <div>
+        <span>2018</span>
+        <p>Established</p>
+      </div>
+      <div>
+        <span>Rovaniemi</span>
+        <p>Home base</p>
+      </div>
+      <div>
+        <span>2956277-9</span>
+        <p>Business ID</p>
+      </div>
+      <div>
+        <span>Finland · Southeast Asia</span>
+        <p>International perspective</p>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="section-grid">
+        <div class="section-label">
+          <span>05</span>
+          <p>Contact</p>
+        </div>
+        <div class="contact-main reveal">
+          <p class="eyebrow">LET'S TALK</p>
+          <h2>What can we help you develop?</h2>
+          <p>
+            For consulting, international development, tourism services, study visits and partnership enquiries.
+          </p>
+          <div class="contact-email contact-pending">Contact details <span>To be confirmed</span></div>
+          <div class="contact-meta">
+            <span>LinArctic Oy</span>
+            <span>Rovaniemi, Lapland, Finland</span>
+            <span>Business ID 2956277-9</span>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-shell">
-      <img src="./assets/linarctic-logo.png" alt="LinArctic Oy">
-      <p>Consulting rooted in northern industries.</p>
-      <span>© 2026 LinArctic Oy</span>
+    <div class="footer-inner">
+      <img src="./assets/linarctic-logo.svg" alt="LinArctic Oy">
+      <div>
+        <p>Northern expertise. International development.</p>
+        <span>© 2026 LinArctic Oy</span>
+      </div>
     </div>
   </footer>
 
