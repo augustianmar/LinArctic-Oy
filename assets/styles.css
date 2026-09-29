@@ -529,29 +529,69 @@ h1,h2,h3 { font-family: var(--display); font-weight: 400; }
 }
 
 footer {
-  padding: 42px 48px;
+  padding: 48px;
   background: #111111;
   color: var(--white);
 }
+
 .footer-inner {
   max-width: 1344px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 54px;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
 }
-.footer-inner img {
+
+.footer-brand img {
   width: 108px;
   filter: invert(1);
 }
-.footer-inner div { text-align: right; }
-.footer-inner p {
+
+.footer-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  border-left: 1px solid rgba(255,255,255,.16);
+  border-right: 1px solid rgba(255,255,255,.16);
+}
+
+.footer-facts > div {
+  padding: 6px 30px;
+  border-right: 1px solid rgba(255,255,255,.12);
+}
+
+.footer-facts > div:last-child {
+  border-right: 0;
+}
+
+.footer-facts span {
+  display: block;
   margin-bottom: 8px;
+  color: rgba(255,255,255,.45);
+  font-size: 9px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.footer-facts strong {
+  display: block;
+  color: rgba(255,255,255,.92);
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.footer-credit {
+  text-align: right;
+}
+
+.footer-credit p {
+  margin: 0 0 8px;
   font-family: var(--display);
   font-size: 20px;
 }
-.footer-inner span {
+
+.footer-credit span {
   color: rgba(255,255,255,.55);
   font-size: 10px;
   letter-spacing: .08em;
@@ -652,4 +692,43 @@ footer {
   footer { padding: 34px 22px; }
   .footer-inner { align-items: flex-start; flex-direction: column; }
   .footer-inner div { text-align: left; }
+}
+
+
+@media (max-width: 980px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-facts {
+    grid-template-columns: 1fr 1fr 1fr;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid rgba(255,255,255,.16);
+    border-bottom: 1px solid rgba(255,255,255,.16);
+  }
+
+  .footer-facts > div {
+    padding: 22px 18px;
+  }
+
+  .footer-credit {
+    text-align: left;
+  }
+}
+
+@media (max-width: 620px) {
+  .footer-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-facts > div {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+  }
+
+  .footer-facts > div:last-child {
+    border-bottom: 0;
+  }
 }
