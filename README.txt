@@ -1,1 +1,1 @@
-LinArctic Oy homepage visual concept v2 (November 2026). Open index.html in a local browser. All five user-supplied photos are copied byte-for-byte into assets, not retouched. This preview is not published to the live GitHub Pages site. Contact information and additional property details are still placeholders / pending confirmation.
+LinArctic Oy homepage preview V3. Retains V2 design and supplied photos while using the previously approved rounded-fell logo in the top header. This concept has not been published to GitHub Pages.

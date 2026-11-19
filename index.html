@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#191713" name="theme-color"/>
-<title>LinArctic Oy | Northern Roots, International Connections</title>
+<title>LinArctic Oy | Orrenkolo Accommodation — Preview V5.1</title>
 <style>
 :root { --cream:#f7f0e3;--white:#fff9ed;--muted:#cec0af;--rust:#9f614b;--rustlight:#c88d6d;--dark:#201a17;--lightwood:#c3ad8e;--olive:#697c50;}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#1e1815;color:var(--cream);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
@@ -95,17 +100,307 @@ h1{font:900 clamp(45px,5.15vw,78px)/.99 'Arial Narrow','Liberation Sans Narrow',
 .contact-topics{max-width:850px;margin-left:auto;margin-right:auto}
 @media(max-width:980px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}.service{min-height:200px}.team-copy{padding:27px 22px}.team-copy h3{font-size:23px}.team-copy p:not(.team-role){font-size:12px}.consulting-copy{padding:42px}.consulting-aside{padding:19px}.consulting-aside-inner{padding:22px}}
 @media(max-width:720px){.hero h1{font-size:clamp(37px,9vw,53px)}.services{grid-template-columns:1fr}.service{min-height:0;padding:28px 23px}.service h3{font-size:13px}.consulting-section{padding-top:25px}.consulting-panel{grid-template-columns:1fr}.consulting-copy{padding:35px 29px}.consulting-aside{padding:16px}.consulting-aside-inner{padding:20px;gap:13px}.consulting-aside-inner div{font-size:18px}.team-section{padding-top:45px;padding-bottom:65px}.team-grid{grid-template-columns:1fr;gap:24px}.team-copy{padding:27px}.team-copy h3{font-size:27px}.team-copy .team-role{min-height:0}.team-copy p:not(.team-role){font-size:13px}.team-card img{aspect-ratio:4/3;object-fit:contain}}
+
+/* Refined approved fell-logo integration, November 2026 */
+.brand{display:flex;justify-content:center;align-items:center;min-width:0;text-shadow:none}
+.brand-logo{display:block;width:190px;height:auto;max-width:100%;filter:drop-shadow(0 1px 5px rgba(0,0,0,.28))}
+@media(min-width:721px){.nav-grid{grid-template-columns:minmax(0,1fr) 198px minmax(0,1fr);gap:16px}}
+@media(max-width:720px){.brand{align-items:flex-start}.brand-logo{width:158px}}
+
+
+/* === V4: full spacing / type / responsive refinement === */
+:root { --content-width:1200px; --space-section:84px; --text-strong:#fff8ea; --text-soft:#e0d0bf; }
+html {scroll-padding-top:25px}
+body {overflow-x:clip;line-height:1.5}
+.shell {max-width:var(--content-width);padding-inline:clamp(22px,3.8vw,46px)}
+.skip-link {position:absolute;left:14px;top:-50px;z-index:500;background:var(--cream);color:#1c1714;padding:12px 17px;font-weight:800}
+.skip-link:focus {top:12px}
+/* Header: center logo stays centered, navigation never allowed to overflow */
+.sitehead {padding-top:28px;width:100%}
+.nav-grid {display:grid;grid-template-columns:minmax(0,1fr) 205px minmax(0,1fr);align-items:center;column-gap:32px;min-height:92px}
+.head-nav {display:flex;align-items:center;gap:clamp(20px,2vw,31px);min-width:0;padding-bottom:12px;border-bottom:1px solid rgba(245,221,188,.45)}
+.nav-left {justify-content:flex-end}
+.nav-right {justify-content:flex-start}
+.head-nav a,.services-dropdown>summary {display:inline-block;position:relative;white-space:nowrap;color:#fff3e8;font-size:12px;line-height:1.4;letter-spacing:1.1px;font-weight:800;text-transform:uppercase;cursor:pointer}
+.head-nav a:hover,.services-dropdown>summary:hover {color:#efc3a0}
+.services-dropdown {position:relative}
+.services-dropdown>summary {list-style:none}
+.services-dropdown>summary::-webkit-details-marker {display:none}
+.services-dropdown>summary span {font-size:16px;vertical-align:1px;margin-left:2px}
+.services-dropdown-panel {position:absolute;left:-15px;top:31px;z-index:20;min-width:242px;padding:9px;background:#221c19;border:1px solid rgba(236,208,176,.42);box-shadow:0 18px 36px rgba(0,0,0,.4)}
+.services-dropdown-panel a {display:block;padding:12px 13px;font-size:11px;letter-spacing:.8px;border-bottom:1px solid rgba(246,225,206,.13)}
+.services-dropdown-panel a:last-child {border:0}
+.brand {min-width:0;align-items:center;justify-content:center;text-shadow:none}
+.brand-logo {display:block;width:192px;height:auto;max-width:100%;filter:drop-shadow(0 2px 6px rgba(0,0,0,.36))}
+.mobile-menu {display:none}
+/* Hero: intentional proportions, readable text even when zoomed */
+.hero {min-height:750px;background-position:center 58%}
+.hero-inner {padding-top:98px;padding-bottom:127px;max-width:1160px}
+.eyebrow-script {font-size:clamp(22px,2.4vw,31px);margin-bottom:18px}
+.hero h1 {font-size:clamp(43px,5.25vw,76px);line-height:1.02;letter-spacing:-1.4px;max-width:980px;text-wrap:balance}
+.hero-desc {font-size:16px;line-height:1.72;max-width:635px;margin:27px auto 29px;text-wrap:pretty}
+.hero-location {bottom:41px;font-size:11px;letter-spacing:2px}
+.button {font-size:11px;letter-spacing:1.2px;padding:15px 23px;min-height:50px}
+/* Content rhythm and comfortable typography */
+.intro {padding-top:104px;padding-bottom:23px}
+.minor {font-size:11px;letter-spacing:2.4px;margin-bottom:14px}
+.section {padding-top:var(--space-section);padding-bottom:var(--space-section)}
+.section-title {font-size:clamp(29px,3vw,39px);line-height:1.2;text-wrap:balance}
+.rule-title {gap:18px}
+.rule-title:before,.rule-title:after {width:40px;flex:0 0 40px;height:1px}
+.intro-text {font-size:16px;line-height:1.75;max-width:750px;margin-top:20px}
+.section-heading {margin-bottom:37px}
+.section-heading .sub {font-size:16px;line-height:1.5;margin-top:12px}
+.services {grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-top:42px}
+.service {min-height:235px;padding:31px 23px 29px;display:flex;flex-direction:column;align-items:center;transition:background .2s,transform .2s}
+.service:hover {background:rgba(234,217,192,.14);transform:translateY(-3px)}
+.service-icon {width:40px;height:40px;margin-bottom:21px}
+.service h3 {font-size:13px;letter-spacing:1.2px;line-height:1.35;margin-bottom:13px}
+.service p {font-size:14px;line-height:1.65;color:var(--text-soft)}
+.consulting-section {padding-top:75px;padding-bottom:84px}
+.consulting-panel {grid-template-columns:1.28fr .8fr;min-height:390px}
+.consulting-copy {padding:52px 54px}
+.consulting-copy h3 {font-size:clamp(32px,3vw,42px);margin-bottom:20px}
+.consulting-copy p:not(.minor) {font-size:15px;line-height:1.72;margin-bottom:15px}
+.consulting-link {font-size:11px;line-height:1.55;margin-top:12px}
+.consulting-aside {padding:29px}
+.consulting-aside-inner {padding:26px}
+.consulting-aside-inner div {font-size:20px}
+#consulting .section-title {max-width:820px;margin-inline:auto}
+.featured {grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);min-height:390px}
+.feature-photo {min-height:390px}
+.feature-copy {padding:40px 42px}
+.feature-copy h3 {font-size:46px}
+.feature-copy p:not(.minor) {font-size:15px;line-height:1.72;margin:21px 0 24px}
+.place {font-size:11px;letter-spacing:1.4px}
+.experiences-section {padding-top:18px;padding-bottom:82px}
+.split-panels {padding-top:0;gap:18px}
+.panel {min-height:325px;padding:39px 39px}
+.panel .minor {font-size:11px;letter-spacing:1.9px}
+.panel h3 {font-size:29px;line-height:1.25;margin-bottom:15px}
+.panel p {font-size:15px;line-height:1.7;max-width:450px;margin-bottom:24px}
+.panel a {font-size:11px;line-height:1.5}
+.location {min-height:435px}
+.location-panel {padding:62px 64px}
+.location h2 {font-size:clamp(34px,3.5vw,48px);line-height:1.2}
+.location p:not(.minor) {font-size:15px;line-height:1.72}
+.location-small {font-size:11px}
+.about-strip {padding-top:90px;padding-bottom:78px}
+.about-strip h2 {font-size:clamp(29px,3vw,39px)}
+.about-strip p:not(.minor) {font-size:16px;line-height:1.75}
+.facts {gap:clamp(34px,5vw,75px);margin-top:38px}
+.fact strong {font-size:27px}
+.fact span {font-size:10px;letter-spacing:1.45px;line-height:1.5}
+.team-section {padding-top:82px;padding-bottom:105px}
+.team-grid {gap:18px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.team-card img {width:100%;aspect-ratio:4 / 3;object-fit:contain;background:#171411}
+.team-copy {padding:29px 28px 29px;display:flex;flex-direction:column;flex:1}
+.team-index {font-size:20px;margin-bottom:8px}
+.team-copy h3 {font-size:26px;line-height:1.2;margin-bottom:10px}
+.team-copy .team-role {font-size:11px;line-height:1.55;letter-spacing:.85px;margin-bottom:17px;min-height:34px}
+.team-copy p.team-summary {font-size:14.5px;line-height:1.72;color:#e4d3c1;margin:0 0 23px}
+.team-more {margin-top:auto;border-top:1px solid rgba(240,210,180,.2);padding-top:17px}
+.team-more summary {cursor:pointer;list-style:none;color:#eac09c;font-size:11px;line-height:1.6;font-weight:800;letter-spacing:1.25px;text-transform:uppercase}
+.team-more summary:after {content:'+';float:right;font-size:20px;line-height:14px}
+.team-more[open] summary:after {content:'−'}
+.team-more summary::-webkit-details-marker {display:none}
+.team-bio {padding-top:16px}
+.team-bio p {font-size:14px!important;line-height:1.7!important;color:#d6c6b7;margin:0 0 14px}
+.contact {padding:79px 0 76px}
+.contact h2 {font-size:clamp(30px,3vw,42px)}
+.contact p {font-size:16px;line-height:1.68}
+.contact-topics span {font-size:11px;letter-spacing:.9px;padding:12px 16px}
+.contact-note {font-size:12px!important;opacity:.75;margin-top:27px!important}
+.footer {padding-top:51px;padding-bottom:33px}
+.footer-links {gap:16px 23px;justify-content:flex-end}
+.footer-links a {font-size:11px;line-height:1.5;letter-spacing:.65px}
+.footer-desc {font-size:12px}
+.copyright {font-size:11px}
+/* Tablet / zoomed desktop: switch to compact menu before navigation gets crowded. */
+@media(max-width:1100px){
+ .nav-grid {display:flex;align-items:center;justify-content:space-between;min-height:75px;gap:15px}
+ .head-nav {display:none}
+ .brand {align-items:flex-start}
+ .brand-logo {width:182px}
+ .mobile-menu {display:block;position:relative}
+ .mobile-menu>summary {list-style:none;cursor:pointer;display:flex;flex-direction:column;gap:6px;min-height:45px;min-width:45px;align-items:center;justify-content:center;padding:9px;border:1px solid rgba(246,229,202,.45);border-radius:2px}
+ .mobile-menu>summary::-webkit-details-marker {display:none}
+ .mobile-menu>summary span {width:24px;height:2px;background:#fff4e3;display:block}
+ .mobile-menu nav {position:absolute;z-index:25;right:0;top:54px;width:min(335px,calc(100vw - 44px));max-height:calc(100vh - 130px);overflow-y:auto;display:flex;flex-direction:column;padding:10px 17px;background:#211a16;border:1px solid rgba(240,210,180,.42);box-shadow:0 22px 45px #0009}
+ .mobile-menu nav a {display:block;padding:13px 7px;font-size:13px;letter-spacing:1px;font-weight:800;text-transform:uppercase;border-bottom:1px solid rgba(235,205,170,.18)}
+ .mobile-menu nav a:last-child {border:0}
+ .services {grid-template-columns:repeat(2,minmax(0,1fr))}
+ .service {min-height:210px}
+ .team-grid {gap:13px}
+ .team-copy {padding:24px 20px}
+ .team-copy h3 {font-size:23px}
+ .team-copy p.team-summary {font-size:14px}
+ .consulting-copy {padding:44px}
+ .consulting-aside {padding:20px}
+ .consulting-aside-inner {padding:20px}
+}
+@media(max-width:760px){
+ :root {--space-section:60px}
+ .shell {padding-inline:22px}
+ .sitehead {padding-top:17px}
+ .brand-logo {width:162px}
+ .hero {min-height:660px;background-position:56% center}
+ .hero-inner {padding-top:66px;padding-bottom:110px}
+ .eyebrow-script {font-size:clamp(22px,5vw,27px);line-height:1.3;margin-bottom:16px}
+ .hero h1 {font-size:clamp(37px,8.6vw,58px);letter-spacing:-.6px;line-height:1.07;max-width:620px}
+ .hero-desc {font-size:15px;line-height:1.68;margin-top:20px;margin-bottom:24px}
+ .hero-location {bottom:26px;font-size:9px;letter-spacing:1.35px;gap:8px;padding-inline:18px}
+ .hero-location:before,.hero-location:after {width:23px;flex:0 0 23px}
+ .button {font-size:11px;padding:13px 17px;min-height:47px}
+ .intro {padding-top:74px;padding-bottom:12px}
+ .intro-text {font-size:15px;line-height:1.72}
+ .section-title {font-size:clamp(28px,5.7vw,36px)}
+ .rule-title {gap:11px}
+ .rule-title:before,.rule-title:after {width:22px;flex-basis:22px}
+ .section-heading {margin-bottom:27px}
+ .services {margin-top:30px;gap:12px}
+ .service {padding:27px 18px;min-height:210px}
+ .service p {font-size:14px}
+ .consulting-section {padding-top:59px;padding-bottom:62px}
+ .consulting-panel {grid-template-columns:1fr;min-height:0}
+ .consulting-copy {padding:36px 30px}
+ .consulting-copy h3 {font-size:34px}
+ .consulting-copy p:not(.minor) {font-size:15px}
+ .consulting-aside {padding:17px}
+ .consulting-aside-inner {padding:23px}
+ .consulting-aside-inner div {font-size:19px}
+ .featured {grid-template-columns:1fr}
+ .feature-photo {min-height:0;height:clamp(250px,58vw,385px)}
+ .feature-copy {padding:36px 32px}
+ .feature-copy h3 {font-size:40px}
+ .feature-copy p:not(.minor) {font-size:15px}
+ .experiences-section {padding-top:12px;padding-bottom:64px}
+ .split-panels {grid-template-columns:1fr;gap:14px}
+ .panel {min-height:285px;padding:30px}
+ .panel h3 {font-size:29px}
+ .panel p {font-size:15px}
+ .location {display:block;min-height:425px}
+ .location-panel {padding:54px 31px}
+ .location h2 {font-size:36px}
+ .location-small {font-size:10px;right:20px;bottom:19px}
+ .about-strip {padding-top:64px;padding-bottom:57px}
+ .about-strip h2 {font-size:32px}
+ .about-strip p:not(.minor) {font-size:15px}
+ .facts {gap:22px;margin-top:30px}
+ .fact strong {font-size:24px}
+ .team-section {padding-top:58px;padding-bottom:75px}
+ .team-grid {grid-template-columns:1fr;gap:24px;max-width:510px;margin-inline:auto}
+ .team-card img {aspect-ratio:4 / 3}
+ .team-copy {padding:30px}
+ .team-copy h3 {font-size:27px}
+ .team-copy .team-role {font-size:11.5px;min-height:0}
+ .team-copy p.team-summary {font-size:15px}
+ .contact {padding:65px 0}
+ .contact p {font-size:15px}
+ .footer-inner {align-items:flex-start;flex-direction:column;gap:26px}
+ .footer-links {justify-content:flex-start}
+ .preview-tag {font-size:8px;padding:7px 9px}
+}
+@media(max-width:470px){
+ .hero-actions {flex-direction:column;align-items:center;width:100%;max-width:285px;margin-inline:auto;gap:10px}
+ .hero-actions .button {width:100%}
+ .hero h1 {font-size:clamp(34px,8.8vw,43px)}
+ .eyebrow-script {font-size:21px}
+ .services {grid-template-columns:1fr}
+ .service {min-height:0;padding:25px 25px 27px}
+ .service-icon {margin-bottom:16px}
+ .section-title {font-size:29px}
+ #consulting .rule-title:before,#consulting .rule-title:after {display:none}
+ .minor {font-size:10px;letter-spacing:2px}
+ .contact-topics span {font-size:10px;padding:11px}
+}
+@media(max-width:360px){.shell{padding-inline:16px}.hero h1{font-size:33px}.hero-desc{font-size:14.5px}.location-panel{padding:42px 23px}.team-copy{padding:24px}}
+@media(prefers-reduced-motion:reduce){.service:hover{transform:none}}
+
+/* Targeted V4 photo correction: preserve the original image and card layout. */
+.augustian-image-frame { width:100%; aspect-ratio:4 / 3; overflow:hidden; background:#171411; }
+.team-card .augustian-image-frame img { width:100%; height:100%; aspect-ratio:auto; display:block; object-fit:cover; object-position:center; transform:scale(1.72); transform-origin:54% 60%; }
+
+/* V5: Expandable Orrenkolo cottage information, without changing existing page geometry. */
+.cabin-preview-facts {display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:-2px 0 20px}
+.cabin-preview-facts span {padding:8px 10px;border:1px solid #8b705e;font-size:11px;line-height:1.2;letter-spacing:.2px;color:#443024;font-weight:700}
+.feature-copy .cabin-expand-button {cursor:pointer;font:800 11px/1.35 Arial, sans-serif;letter-spacing:1.2px;gap:14px;text-transform:uppercase}
+.cabin-expand-arrow {font-size:19px;font-weight:400;line-height:.8;vertical-align:middle}
+.cabin-details[hidden] {display:none!important}
+.cabin-details {background:#201b17;border:1px solid rgba(231,205,171,.32);border-top:3px solid #a66a4b;margin-top:18px;box-shadow:0 26px 55px rgba(0,0,0,.23);overflow:hidden;animation:cabinReveal .25s ease}
+@keyframes cabinReveal {from{opacity:.45;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.cabin-details-intro {padding:48px 49px 34px;display:flex;align-items:end;justify-content:space-between;gap:24px}
+.cabin-details-intro h3 {font:700 clamp(30px,3.1vw,45px)/1.13 Georgia,serif;color:#f8ebd6;letter-spacing:-.7px;margin:7px 0 11px}
+.cabin-details-intro p:not(.minor) {font-size:15px;line-height:1.7;color:#dfcfc0;max-width:690px;margin:0}
+.cabin-tag {display:inline-block;border:1px solid #9f816b;padding:12px 15px;font-size:11px;line-height:1.4;letter-spacing:.6px;color:#ebd6c4;white-space:nowrap}
+.cabin-spec-grid {display:grid;grid-template-columns:1fr .85fr 1.6fr .85fr .9fr;margin:0 49px 24px;border-block:1px solid #735c4d}
+.cabin-spec-grid>div {padding:21px 18px 23px;border-right:1px solid #5b4a3d;min-width:0}
+.cabin-spec-grid>div:first-child {padding-left:0}
+.cabin-spec-grid>div:last-child {border:0}
+.cabin-spec-grid dt,.cabin-distance-grid dt {font-size:10px;text-transform:uppercase;letter-spacing:1.2px;font-weight:800;color:#c5a88f;margin-bottom:10px}
+.cabin-spec-grid dd {font:700 29px/1.1 Georgia,serif;color:#fff0de;margin:0}
+.cabin-spec-grid dd span {font:600 13px/1.3 Arial,sans-serif;color:#e7d4bf;letter-spacing:0}
+.cabin-details-columns {display:grid;grid-template-columns:.88fr 1.12fr;gap:17px;padding:0 49px 22px}
+.cabin-card {padding:34px 35px;min-width:0;background:rgba(204,164,124,.09);border:1px solid rgba(216,182,150,.22)}
+.cabin-card h4,.cabin-getting-here h4 {font:700 28px/1.18 Georgia,serif;letter-spacing:-.2px;color:#fff0dc;margin:8px 0 17px}
+.cabin-card .minor {margin:0;color:#c3a287}
+.cabin-card-sub {font-size:14px;line-height:1.6;color:#cdbdab;margin:0 0 18px}
+.cabin-sleep-list {margin:0}
+.cabin-sleep-list>div {display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid rgba(225,199,171,.22)}
+.cabin-sleep-list dt {font-size:14px;color:#f5e6d4;font-weight:700}
+.cabin-sleep-list dd {font-size:15px;color:#f4e3d2;margin:0;white-space:nowrap}
+.cabin-sleep-list dd span {color:#d0b6a2;font-size:12px}
+.cabin-sleep-list>div.cabin-sleep-total {background:rgba(224,180,139,.1);padding:17px 11px;border-bottom:0;margin-top:5px}
+.cabin-sleep-total dd,.cabin-sleep-total dt {font-weight:800}
+.cabin-access-note {font-size:12px;line-height:1.65;color:#baab9a;margin:20px 0 0}
+.cabin-facility-groups {display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.cabin-facility-groups h5 {font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#dcb28d;margin:0 0 15px}
+.cabin-facility-groups ul {list-style:none;margin:0;padding:0}
+.cabin-facility-groups li {position:relative;padding:0 0 12px 17px;font-size:14px;line-height:1.57;color:#e0cfc0}
+.cabin-facility-groups li:before {content:'•';color:#d5a37c;position:absolute;left:0;top:0}
+.cabin-getting-here {margin:0 49px;display:grid;grid-template-columns:1fr 1.08fr;gap:34px;padding:35px 0 24px;border-top:1px solid #5a483b}
+.cabin-getting-here h4 {font-size:29px}
+.cabin-address address {font-style:normal;font-size:15px;line-height:1.65;color:#f5deca;font-weight:700;margin-bottom:15px}
+.cabin-address p:not(.minor) {font-size:14px;line-height:1.65;color:#d5c2b1;margin:0 0 17px;max-width:410px}
+.cabin-directions {color:#e9bb96;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;font-size:12px;font-weight:800;letter-spacing:.4px}
+.cabin-directions:hover {color:#fff3e8}
+.cabin-distance-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin:0;align-content:start}
+.cabin-distance-grid>div {background:rgba(226,192,153,.08);border:1px solid #624d40;padding:15px 16px}
+.cabin-distance-grid>div:last-child {grid-column:1 / -1}
+.cabin-distance-grid dt {font-size:10px;margin-bottom:9px}
+.cabin-distance-grid dd {font:700 21px Georgia,serif;color:#fcebd5;margin:0}
+.cabin-disclaimer {padding:0 49px;margin:0 0 24px;color:#b7a496;font-size:11px;line-height:1.5}
+.cabin-detail-footer {padding:24px 49px;background:#30261f;display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid #594538}
+.cabin-detail-footer span {font:italic 20px Georgia,serif;color:#f3e0c9}
+.cabin-detail-footer .button {min-height:47px}
+@media(max-width:960px){.cabin-details-intro{padding:37px 34px 29px}.cabin-spec-grid{margin:0 34px 20px}.cabin-spec-grid>div{padding:19px 10px}.cabin-spec-grid dd{font-size:24px}.cabin-spec-grid dd span{font-size:11px}.cabin-details-columns{padding:0 34px 20px;grid-template-columns:1fr}.cabin-getting-here{margin:0 34px}.cabin-disclaimer{padding:0 34px}.cabin-detail-footer{padding:23px 34px}}
+@media(max-width:620px){.cabin-details-intro{padding:31px 22px 24px;display:block}.cabin-details-intro h3{font-size:32px}.cabin-tag{margin-top:18px}.cabin-spec-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin:0 22px 17px}.cabin-spec-grid>div{border-bottom:1px solid #5b4a3d;padding:16px 12px!important}.cabin-spec-grid>div:nth-child(even){border-right:0}.cabin-spec-grid>div:last-child{border-bottom:0}.cabin-spec-grid dd{font-size:26px}.cabin-spec-grid dd span{font-size:12px}.cabin-details-columns{padding:0 16px 17px;gap:13px}.cabin-card{padding:26px 23px}.cabin-card h4{font-size:26px}.cabin-facility-groups{grid-template-columns:1fr;gap:15px}.cabin-facility-groups li{font-size:14px;padding-bottom:9px}.cabin-getting-here{grid-template-columns:1fr;margin:0 22px;gap:23px;padding-top:26px}.cabin-disclaimer{padding:0 22px}.cabin-detail-footer{padding:23px 22px;align-items:flex-start;flex-direction:column}.cabin-detail-footer span{font-size:19px}.cabin-detail-footer .button{width:100%}}
+@media(max-width:370px){.cabin-sleep-list>div{gap:9px}.cabin-sleep-list dt,.cabin-sleep-list dd{font-size:12px}.cabin-sleep-list dd span{font-size:11px}.cabin-facility-groups{grid-template-columns:1fr}.cabin-spec-grid dd span{display:block;margin-top:3px}.cabin-preview-facts span{font-size:10px;padding:7px}}
+@media(prefers-reduced-motion:reduce){.cabin-details{animation:none}}
+
+.orr-gallery-row{display:grid;grid-template-columns:minmax(0,1.17fr) minmax(0,.83fr);gap:0;margin:0 49px 23px;border:1px solid #6b5545;background:#2e251e}
+.orr-gallery-photo{border:0;padding:0;cursor:zoom-in;position:relative;background:#110f0c;min-width:0;overflow:hidden;display:block;aspect-ratio:16/9}
+.orr-gallery-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 54%;transition:transform .25s ease}
+.orr-gallery-photo:hover img{transform:scale(1.025)}
+.orr-gallery-photo span{position:absolute;bottom:0;left:0;right:0;text-align:left;padding:18px 18px 16px;font:700 12px/1.4 Arial,sans-serif;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.orr-gallery-note{padding:24px 29px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.orr-gallery-note h4{font:700 clamp(20px,2vw,27px)/1.16 Georgia,serif;color:#fff0dc;margin:9px 0 12px}
+.orr-gallery-note p:not(.minor){font-size:14px;line-height:1.6;color:#d4c2af;margin:0 0 15px}
+.orr-gallery-link{font:700 12px/1.5 Arial,sans-serif;text-decoration:underline;text-underline-offset:5px;color:#e9bb96}
+.orr-gallery-link:hover{color:#fff5e9}
+.orr-gallery-lightbox{background:#17130e;border:1px solid #6b5545;max-width:min(92vw,1250px);max-height:92vh;padding:16px;box-shadow:0 12px 70px rgba(0,0,0,.6)}
+.orr-gallery-lightbox::backdrop{background:rgba(0,0,0,.83)}
+.orr-gallery-lightbox img{display:block;width:auto;max-width:100%;max-height:calc(92vh - 35px);height:auto;margin:auto}
+.orr-lightbox-close{position:absolute;top:3px;right:10px;background:rgba(0,0,0,.7);color:white;border:0;border-radius:50%;font-size:25px;line-height:1;width:34px;height:34px;cursor:pointer}
+@media(max-width:960px){.orr-gallery-row{margin:0 34px 20px}}
+@media(max-width:620px){.orr-gallery-row{margin:0 16px 17px;grid-template-columns:1fr}.orr-gallery-photo{aspect-ratio:16/10}.orr-gallery-note{padding:23px}.orr-gallery-note h4{font-size:24px}}
+@media(prefers-reduced-motion:reduce){.orr-gallery-photo img{transition:none}}
 </style>
 <meta content="LinArctic Oy is a Rovaniemi-based Finnish consulting and development company working in international development, tourism services, accommodation and educational programmes." name="description"/></head>
-<body>
+<body><a class="skip-link" href="#our-services">Skip to content</a>
 <section class="hero" id="home">
 <header class="sitehead shell">
-<div class="nav-grid">
-<nav aria-label="Main navigation left" class="navlinks"><a href="#home">Home</a><a href="#accommodation">Accommodation</a><a href="#tourism">Tourism Services</a><a href="#consulting">Consulting</a></nav>
-<a aria-label="LinArctic Oy homepage" class="brand" href="#home"><svg aria-hidden="true" class="brand-symbol" viewbox="0 0 64 34"><path d="M2 30 23 6l12 13L45 2l17 28M15 30l8-9 8 9M33 30 45 17l12 13"></path><path d="M6 33h52"></path></svg><span class="brand-word">LinArctic</span><span class="brand-desc">Lapland · Finland</span></a>
-<nav aria-label="Main navigation right" class="navlinks"><a href="#study-camp">Study Camp</a><a href="#about">About Us</a><a href="#team">Our Team</a><a href="#contact">Contact</a></nav>
-<details class="mobile-menu"><summary aria-label="Open navigation"><span></span><span></span><span></span></summary><nav aria-label="Mobile navigation"><a href="#home">Home</a><a href="#accommodation">Accommodation</a><a href="#tourism">Tourism Services</a><a href="#study-camp">Study Camp</a><a href="#consulting">Consulting</a><a href="#about">About Us</a><a href="#team">Our Team</a><a href="#contact">Contact</a></nav></details>
-</div>
+<div class="nav-grid"><nav aria-label="Company navigation" class="head-nav nav-left"><a href="#about">About Us</a><a href="#consulting">Consulting</a></nav><a aria-label="LinArctic Oy — back to top" class="brand" href="#home"><img alt="LinArctic — Lapland · Finland" class="brand-logo" height="180" src="assets/linarctic-approved-logo.png" width="425"/></a><nav aria-label="Primary navigation" class="head-nav nav-right"><details class="services-dropdown"><summary>Our Services <span aria-hidden="true">⌄</span></summary><div class="services-dropdown-panel"><a href="#consulting">Development Consulting</a><a href="#tourism">Tourism Services</a><a href="#accommodation">Accommodation</a><a href="#study-camp">Study Camp</a></div></details><a href="#team">Our Team</a><a href="#contact">Contact</a></nav><details class="mobile-menu"><summary aria-haspopup="true" aria-label="Open navigation menu"><span></span><span></span><span></span></summary><nav aria-label="Mobile navigation"><a href="#home">Home</a><a href="#about">About Us</a><a href="#consulting">Development Consulting</a><a href="#tourism">Tourism Services</a><a href="#accommodation">Accommodation</a><a href="#study-camp">Study Camp</a><a href="#team">Our Team</a><a href="#contact">Contact</a></nav></details></div>
 </header>
 <div class="hero-inner shell">
 <p class="eyebrow-script">Northern roots. International outlook.</p>
@@ -122,35 +417,105 @@ h1{font:900 clamp(45px,5.15vw,78px)/.99 'Arial Narrow','Liberation Sans Narrow',
 <p class="intro-text">LinArctic Oy brings together Finnish expertise, tourism in Lapland and international relationships spanning Southeast Asia. Explore our work in the North and beyond.</p>
 <div class="services"><a class="service" href="#consulting"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><circle cx="20" cy="20" r="16"></circle><path d="M5 20h30M20 4c-6 7-8 25 0 32M20 4c6 7 8 25 0 32M8 12h24M8 28h24"></path></svg><h3>Development Consulting</h3><p>Sustainable development, natural resources, energy efficiency and international cooperation.</p></a><a class="service" href="#tourism"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><circle cx="20" cy="20" r="16"></circle><path d="m25 15-5 11-5-6 10-5zM20 4v4M20 32v4M4 20h4M32 20h4"></path></svg><h3>Tourism Services</h3><p>Discover northern travel experiences and tailored tourism arrangements in Finnish Lapland.</p></a><a class="service" href="#accommodation"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><path d="M4 19 20 5l16 14M8 17v18h24V17M15 35V23h10v12M4 35h32"></path></svg><h3>Accommodation</h3><p>Cabin stays in the peaceful woodland surroundings of Luosto.</p></a><a class="service" href="#study-camp"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><path d="m3 15 17-9 17 9-17-9zM10 20v10c5 4 15 4 20 0V20M37 15v15"></path></svg><h3>Study Camp</h3><p>Educational exchange concepts connecting schools across Southeast Asia with Finnish Lapland.</p></a></div>
 </section>
-<section class="section shell" id="accommodation">
-<div class="section-heading"><p class="minor">Rest among the pines</p><h2 class="section-title rule-title">Featured Accommodation</h2><p class="sub">A quiet escape in the Pyhä–Luosto area</p></div>
-<div class="featured">
-<div class="feature-photo"><img alt="Orrenkolo cabin surrounded by snow and pine trees at Orresokka, Luosto" src="assets/orrenkolo.jpg"/><div class="photo-label">Cabin accommodation · Luosto</div></div>
-<div class="feature-copy"><p class="minor">Featured Cabin · Luosto</p><h3>Orrenkolo</h3><div class="place">Orresokka · Luosto</div><p>A welcoming cabin set among snow-covered pines in the Pyhä–Luosto region. Discover a slower pace and the beauty of Lapland's natural surroundings.</p><a class="button" href="#contact">Enquire About a Stay</a></div>
-</div>
-</section>
-<section class="section shell" style="padding-top:10px">
-<div class="section-heading"><p class="minor">Beyond the cabin</p><h2 class="section-title rule-title">Our Experiences</h2></div>
-<div class="split-panels"><article class="panel tour" id="tourism"><div aria-hidden="true" class="ghost">N</div><p class="minor">01 · Tourism Services</p><h3>Explore the North</h3><p>Discover possibilities for travel, outdoor experiences and local services around Finnish Lapland. Activities and arrangements are tailored to each enquiry.</p><a href="#contact">Tourism Enquiries ↗</a></article><article class="panel study" id="study-camp"><div aria-hidden="true" class="ghost">S</div><p class="minor">02 · Educational Programmes</p><h3>Study Camp Indonesia–Lapland</h3><p>An international educational programme in development for schools across Indonesia and Southeast Asia, bringing together learning, intercultural exchange and Lapland's natural environment.</p><a href="#contact">Explore Study Camp ↗</a></article></div>
-</section>
-<section class="section shell" id="location"><div class="section-heading"><p class="minor">Where we are</p><h2 class="section-title rule-title">Discover Our Location</h2></div><div class="location"><img alt="Starry blue night sky above Luosto fjell and illuminated forests in the Pyhä–Luosto area" class="location-photo" src="assets/luosto-fjell.jpg"/><div class="location-panel"><p class="minor">Luosto · Finnish Lapland</p><h2>In the heart of the fell landscape.</h2><p>From the slopes of Luosto Fjell to the forests of Orresokka, this is the northern setting our cabins call home.</p></div><span class="location-small">Luosto Fjell · Pyhä–Luosto</span></div></section>
 <section class="section shell consulting-section" id="consulting">
 <div class="section-heading"><p class="minor">Expertise across borders</p><h2 class="section-title rule-title">International Development &amp; Consulting</h2><p class="sub">Practical expertise. Long-standing international experience.</p></div>
 <div class="consulting-panel"><div class="consulting-copy"><p class="minor">Rovaniemi · Finland · Southeast Asia</p><h3>Expertise beyond the Arctic.</h3><p>Our consulting and development work draws on expertise in sustainable natural-resource management, environmental governance, energy efficiency and international cooperation.</p><p>With more than 20 years of experience in Southeast Asia among LinArctic's owners, our team combines experience in Finland with international project and partnership work.</p><a class="consulting-link" href="#team">Meet the people behind the work <span aria-hidden="true">↗</span></a></div>
 <div class="consulting-aside"><div class="consulting-aside-inner"><span class="tiny">Areas of experience</span><div>Sustainable<br/>development</div><div>Natural resources<br/>&amp; forestry</div><div>Energy efficiency<br/>&amp; building systems</div><div>International<br/>partnerships</div></div></div></div>
+</section><section class="section shell" id="accommodation">
+<div class="section-heading"><p class="minor">Rest among the pines</p><h2 class="section-title rule-title">Featured Accommodation</h2><p class="sub">A quiet escape in the Pyhä–Luosto area</p></div>
+<div class="featured">
+<div class="feature-photo"><img alt="Enhanced winter exterior photograph of Orrenkolo cabin in Orresokka, Luosto" decoding="async" height="1086" src="assets/orrenkolo-enhanced.webp" width="1448"/><div class="photo-label">Cabin accommodation · Luosto</div></div>
+<div class="feature-copy"><p class="minor">Featured Cabin · Luosto</p><h3>Orrenkolo</h3><div class="place">Orresokka · Luosto</div><p>A detached 81 m² holiday cottage near the Luosto trails, with step-free ground-floor access, a cosy fireplace and loft sleeping for up to eight guests.</p><div aria-label="Cabin at a glance" class="cabin-preview-facts"><span>81 m²</span><span>8 guests</span><span>2 bedrooms + loft</span></div><button aria-controls="orrenkolo-details" aria-expanded="false" class="button cabin-expand-button" type="button">Explore Orrenkolo <span aria-hidden="true" class="cabin-expand-arrow">↓</span></button></div>
+</div>
+<section aria-label="Full Orrenkolo accommodation information" class="cabin-details" hidden="" id="orrenkolo-details">
+<div class="cabin-details-intro">
+<div><p class="minor">Accommodation · The cabin</p><h3>Your stay at Orrenkolo</h3><p>Comfortably equipped for families and small groups, surrounded by the peaceful woodlands of Orresokka, Luosto.</p></div>
+<span class="cabin-tag">Kerkkätie 6 · Luosto</span>
+</div>
+<dl aria-label="Cabin specifications" class="cabin-spec-grid">
+<div><dt>Size</dt><dd>81 <span>m²</span></dd></div>
+<div><dt>Capacity</dt><dd>8 <span>guests</span></dd></div>
+<div><dt>Sleeping areas</dt><dd>2 <span>bedrooms + loft</span></dd></div>
+<div><dt>Toilets</dt><dd>2</dd></div>
+<div><dt>Built</dt><dd>2005</dd></div>
+</dl><div aria-label="Orrenkolo property photograph" class="orr-gallery-row"><button aria-label="Enlarge Orrenkolo cabin exterior photo" class="orr-gallery-photo" type="button"><img alt="Orrenkolo cottage in snow surrounded by pines" height="1024" loading="lazy" src="assets/orrenkolo-enhanced.webp" width="1536"/><span>View exterior photograph <span aria-hidden="true">↗</span></span></button><div class="orr-gallery-note"><p class="minor">Photo gallery</p><h4>See the cottage, inside and out.</h4><p>Explore additional room and facility photographs on Orrenkolo’s listing page.</p><a class="orr-gallery-link" href="https://www.lomarengas.fi/mokit/sodankyla-luosto-orrenkolo-8149" rel="noopener noreferrer" target="_blank">View all photos on Lomarengas <span aria-hidden="true">↗</span></a></div></div><dialog aria-label="Orrenkolo exterior photograph" class="orr-gallery-lightbox"><form method="dialog"><button aria-label="Close photograph" class="orr-lightbox-close">×</button></form><img alt="Enlarged Orrenkolo snowy cabin exterior" height="1024" src="assets/orrenkolo-enhanced.webp" width="1536"/></dialog>
+<div class="cabin-details-columns">
+<article class="cabin-card cabin-sleep">
+<p class="minor">Room to unwind</p><h4>Sleeping arrangements</h4>
+<p class="cabin-card-sub">Two bedrooms, plus a 13 m² sleeping loft.</p>
+<dl class="cabin-sleep-list">
+<div><dt>Bedroom 1</dt><dd>2 beds <span>· 2 persons</span></dd></div>
+<div><dt>Bedroom 2</dt><dd>2 beds <span>· 2 persons</span></dd></div>
+<div><dt>13 m² loft</dt><dd>4 beds <span>· 4 persons</span></dd></div>
+<div class="cabin-sleep-total"><dt>Total fixed capacity</dt><dd>8 persons</dd></div>
+</dl>
+<p class="cabin-access-note">Step-free access to the ground floor; additional sleeping space is in the loft.</p>
+</article>
+<article class="cabin-card cabin-facilities">
+<p class="minor">Everyday comfort</p><h4>Facilities &amp; amenities</h4>
+<div class="cabin-facility-groups">
+<div><h5>Living &amp; wellness</h5><ul>
+<li>Open-plan kitchen and living area</li><li>Fireplace and electric sauna</li><li>Shower and dressing room</li><li>Two indoor toilets</li><li>Washing machine and drying cabinet</li>
+</ul></div>
+<div><h5>Equipment &amp; outdoors</h5><ul>
+<li>Wi-Fi and smart television</li><li>Dishwasher, microwave and oven</li><li>Freezer</li><li>Covered porch and outdoor Weber grill</li><li>32 A electric-vehicle charging</li>
+</ul></div>
+</div>
+</article>
+</div>
+<div class="cabin-getting-here">
+<div class="cabin-address">
+<p class="minor">Location &amp; access</p><h4>In the heart of Luosto.</h4>
+<address>Kerkkätie 6<br/>99555 Luosto, Sodankylä<br/>Finland</address>
+<p>Close to cross-country and outdoor trails, with easy access to Luosto's village services and Pyhä–Luosto National Park.</p>
+<a class="cabin-directions" href="https://www.google.com/maps/search/?api=1&amp;query=Kerkk%C3%A4tie%206%2C%2099555%20Luosto%2C%20Sodankyl%C3%A4%2C%20Finland" rel="noopener noreferrer" target="_blank">View location on Google Maps <span aria-hidden="true">↗</span></a>
+</div>
+<dl aria-label="Approximate distances" class="cabin-distance-grid">
+<div><dt>Luosto centre</dt><dd>~2 km</dd></div>
+<div><dt>National park</dt><dd>~2.5 km</dd></div>
+<div><dt>Trail access</dt><dd>~0.2–0.4 km</dd></div>
+<div><dt>Sodankylä centre</dt><dd>~40 km</dd></div>
+<div><dt>Rovaniemi Airport</dt><dd>~110 km</dd></div>
+</dl>
+</div>
+<p class="cabin-disclaimer">Distances are approximate. Travel times depend on route, road and weather conditions.</p>
+<div class="cabin-detail-footer"><span>Interested in staying at Orrenkolo?</span><a class="button" href="#contact">Enquire About a Stay</a></div>
+</section></section>
+<section class="section shell experiences-section">
+<div class="section-heading"><p class="minor">Beyond the cabin</p><h2 class="section-title rule-title">Our Experiences</h2></div>
+<div class="split-panels"><article class="panel tour" id="tourism"><div aria-hidden="true" class="ghost">N</div><p class="minor">01 · Tourism Services</p><h3>Explore the North</h3><p>Discover possibilities for travel, outdoor experiences and local services around Finnish Lapland. Activities and arrangements are tailored to each enquiry.</p><a href="#contact">Tourism Enquiries</a></article><article class="panel study" id="study-camp"><div aria-hidden="true" class="ghost">S</div><p class="minor">02 · Educational Programmes</p><h3>Study Camp Indonesia–Lapland</h3><p>An international educational programme in development for schools across Indonesia and Southeast Asia, bringing together learning, intercultural exchange and Lapland's natural environment.</p><a href="#contact">Explore Study Camp</a></article></div>
 </section>
+<section class="section shell" id="location"><div class="section-heading"><p class="minor">Where we are</p><h2 class="section-title rule-title">Discover Our Location</h2></div><div class="location"><img alt="Starry blue night sky above Luosto fjell and illuminated forests in the Pyhä–Luosto area" class="location-photo" src="assets/luosto-fjell.jpg"/><div class="location-panel"><p class="minor">Luosto · Finnish Lapland</p><h2>In the heart of the fell landscape.</h2><p>From the slopes of Luosto Fjell to the forests of Orresokka, this is the northern setting our cabins call home.</p></div><span class="location-small">Luosto Fjell · Pyhä–Luosto</span></div></section>
 <section class="about-strip shell" id="about"><p class="minor">About LinArctic Oy</p><h2>Local roots. International outlook.</h2><p>LinArctic Oy is a Finnish consulting and development company based in Rovaniemi, Lapland. We work in international development consulting and tourism services, combining a northern operating base with long-standing experience in Southeast Asia.</p><div class="facts"><div class="fact"><strong>Rovaniemi</strong><span>Finnish headquarters</span></div><div class="fact"><strong>20+ years</strong><span>Southeast Asian experience</span></div><div class="fact"><strong>Pyhä–Luosto</strong><span>Accommodation setting</span></div></div></section>
 <section class="section shell team-section" id="team">
 <div class="section-heading"><p class="minor">The people behind our work</p><h2 class="section-title rule-title">People Behind LinArctic</h2><p class="sub">Experience that bridges sectors, places and people.</p></div>
 <div class="team-grid">
-<article class="team-card"><img alt="Portrait of Juhani Härkönen wearing a dark hat and coat, looking over a Lapland landscape" loading="lazy" src="assets/juhani.png"/><div class="team-copy"><div class="team-index">01</div><h3>Juhani Härkönen</h3><p class="team-role">CEO &amp; Chairman of the Board</p><p>Forestry and natural-resource management specialist with more than 27 years of professional experience in Finland and international assignments. His background includes sustainable forest management, governance, climate-change mitigation and adaptation, forest carbon, REDD+, social forestry, watershed management and forestry policy.</p><p>His international career includes more than two decades of overseas work, including extensive experience in Indonesia and assignments elsewhere in Asia and Africa.</p></div></article>
-<article class="team-card"><img alt="Portrait of Mikko Ruokanen wearing sunglasses beside a historic coastal fortress" loading="lazy" src="assets/mikko.png"/><div class="team-copy"><div class="team-index">02</div><h3>Mikko Ruokanen</h3><p class="team-role">Energy Efficiency &amp; Building Systems</p><p>Energy-efficiency and building-systems specialist with experience dating from 2013 in energy certificates, energy calculations and energy-efficiency improvement.</p><p>His technical background includes building solutions, building services and electronics.</p></div></article>
-<article class="team-card"><img alt="Portrait of Augustian Härkönen sitting on stone steps outdoors" loading="lazy" src="assets/augustian.jpg"/><div class="team-copy"><div class="team-index">03</div><h3>Augustian Härkönen</h3><p class="team-role">Programme Development &amp; Partnership Coordinator</p><p>Specialises in international programme development, cultural event coordination and stakeholder engagement, building partnerships between companies, educational institutions, cultural organisations and public-sector actors in Finland and Southeast Asia.</p><p>His current work includes Study Camp Indonesia–Lapland, international study-visit concepts and cross-cultural initiatives. He is also a shareholder of LinArctic Oy.</p></div></article>
+<article class="team-card"><img alt="Portrait of Juhani Härkönen wearing a dark hat and coat, looking over a Lapland landscape" decoding="async" loading="lazy" src="assets/juhani-web.webp"/><div class="team-copy"><div class="team-index">01</div><h3>Juhani Härkönen</h3><p class="team-role">CEO &amp; Chairman of the Board</p><p class="team-summary">Forestry and natural-resource management specialist with more than 27 years of experience in Finland and international assignments, including extensive work in Southeast Asia.</p><details class="team-more"><summary>Read full biography</summary><div class="team-bio"><p>Forestry and natural-resource management specialist with more than 27 years of professional experience in Finland and international assignments. His background includes sustainable forest management, governance, climate-change mitigation and adaptation, forest carbon, REDD+, social forestry, watershed management and forestry policy.</p><p>His international career includes more than two decades of overseas work, including extensive experience in Indonesia and assignments elsewhere in Asia and Africa.</p></div></details></div></article>
+<article class="team-card"><img alt="Portrait of Mikko Ruokanen wearing sunglasses beside a historic coastal fortress" decoding="async" loading="lazy" src="assets/mikko-web.webp"/><div class="team-copy"><div class="team-index">02</div><h3>Mikko Ruokanen</h3><p class="team-role">Energy Efficiency &amp; Building Systems</p><p class="team-summary">Energy-efficiency and building-systems specialist with experience since 2013 in energy certificates, calculations and efficiency improvement.</p><details class="team-more"><summary>Read full biography</summary><div class="team-bio"><p>Energy-efficiency and building-systems specialist with experience dating from 2013 in energy certificates, energy calculations and energy-efficiency improvement.</p><p>His technical background includes building solutions, building services and electronics.</p></div></details></div></article>
+<article class="team-card"><div class="augustian-image-frame"><img alt="Portrait of Augustian Härkönen sitting on stone steps outdoors" decoding="async" loading="lazy" src="assets/augustian-web.webp"/></div><div class="team-copy"><div class="team-index">03</div><h3>Augustian Härkönen</h3><p class="team-role">Programme Development &amp; Partnership Coordinator</p><p class="team-summary">Develops international programmes and partnerships, specialising in cultural event coordination and stakeholder engagement between Finland and Southeast Asia.</p><details class="team-more"><summary>Read full biography</summary><div class="team-bio"><p>Specialises in international programme development, cultural event coordination and stakeholder engagement, building partnerships between companies, educational institutions, cultural organisations and public-sector actors in Finland and Southeast Asia.</p><p>His current work includes Study Camp Indonesia–Lapland, international study-visit concepts and cross-cultural initiatives. He is also a shareholder of LinArctic Oy.</p></div></details></div></article>
 </div>
 </section>
 </main>
-<section class="contact" id="contact"><div class="shell"><p class="minor">Get in touch</p><h2>Let's build something together.</h2><p>From consulting and international partnerships to a stay in Lapland or an educational programme, we would be glad to hear about your plans.</p><div class="contact-topics"><span>Development Consulting</span><span>Tourism Services</span><span>Accommodation</span><span>Study Camp</span></div><p style="font-size:11px;margin-top:28px;opacity:.75">Contact details will be added when confirmed.</p></div></section>
+<section class="contact" id="contact"><div class="shell"><p class="minor">Get in touch</p><h2>Let's build something together.</h2><p>From consulting and international partnerships to a stay in Lapland or an educational programme, we would be glad to hear about your plans.</p><div class="contact-topics"><span>Development Consulting</span><span>Tourism Services</span><span>Accommodation</span><span>Study Camp</span></div><p class="contact-note">Contact details will be added before the website is published.</p></div></section>
 <footer class="footer"><div class="shell"><div class="footer-inner"><div><div class="footer-brand">LINARCTIC OY</div><div class="footer-desc">Northern expertise. International connections.</div></div><nav aria-label="Footer navigation" class="footer-links"><a href="#home">Home</a><a href="#accommodation">Accommodation</a><a href="#tourism">Tourism</a><a href="#study-camp">Study Camp</a><a href="#consulting">Consulting</a><a href="#team">Team</a><a href="#contact">Contact</a></nav></div><div class="copyright">© 2026 LinArctic Oy · Rovaniemi, Finland · Business ID 2956277-9</div></div></footer>
 <div aria-label="Concept preview, not live" class="preview-tag">DESIGN PREVIEW</div>
-</body>
+<script>document.querySelectorAll('.mobile-menu nav a, .services-dropdown-panel a').forEach(link=>{link.addEventListener('click',()=>{const parent=link.closest('details');if(parent)parent.open=false;});});document.addEventListener('click',event=>{document.querySelectorAll('.services-dropdown[open]').forEach(menu=>{if(!menu.contains(event.target)) menu.open=false;});});</script><script>
+(() => {
+  const panel=document.getElementById('orrenkolo-details');
+  const button=document.querySelector('.cabin-expand-button');
+  if(!panel || !button) return;
+  const setOpen=(open, focusDetail=false)=>{
+    panel.hidden=!open;
+    button.setAttribute('aria-expanded', String(open));
+    button.firstChild.nodeValue = open ? 'Hide Cabin Details ' : 'Explore Orrenkolo ';
+    const arrow=button.querySelector('.cabin-expand-arrow');
+    if(arrow) arrow.textContent=open?'↑':'↓';
+    if(open && focusDetail) requestAnimationFrame(()=>panel.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'}));
+  };
+  button.addEventListener('click',()=>setOpen(panel.hidden,panel.hidden));
+  document.querySelectorAll('a[href="#accommodation"]').forEach(link=>link.addEventListener('click',()=>setOpen(true,false)));
+  if(location.hash==='#accommodation' || location.hash==='#orrenkolo-details') setOpen(true,false);
+  window.addEventListener('hashchange',()=>{if(location.hash==='#accommodation'||location.hash==='#orrenkolo-details')setOpen(true,false)});
+})();
+</script><script>(()=>{const d=document.querySelector('.orr-gallery-lightbox'),b=document.querySelector('.orr-gallery-photo');if(d&&b){b.addEventListener('click',()=>{if(typeof d.showModal==='function')d.showModal();});d.addEventListener('click',(e)=>{if(e.target===d)d.close();});}})();</script></body>
 </html>
