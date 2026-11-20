@@ -9,12 +9,16 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#191713" name="theme-color"/>
-<title>LinArctic Oy | Tourism Services — Preview V6</title>
+<title>LinArctic Oy | Accommodation Gallery — Preview V7</title>
 <style>
 :root { --cream:#f7f0e3;--white:#fff9ed;--muted:#cec0af;--rust:#9f614b;--rustlight:#c88d6d;--dark:#201a17;--lightwood:#c3ad8e;--olive:#697c50;}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#1e1815;color:var(--cream);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
@@ -130,7 +134,6 @@ body {overflow-x:clip;line-height:1.5}
 .services-dropdown {position:relative}
 .services-dropdown>summary {list-style:none}
 .services-dropdown>summary::-webkit-details-marker {display:none}
-.services-dropdown>summary span {font-size:16px;vertical-align:1px;margin-left:2px}
 .services-dropdown-panel {position:absolute;left:-15px;top:31px;z-index:20;min-width:242px;padding:9px;background:#221c19;border:1px solid rgba(236,208,176,.42);box-shadow:0 18px 36px rgba(0,0,0,.4)}
 .services-dropdown-panel a {display:block;padding:12px 13px;font-size:11px;letter-spacing:.8px;border-bottom:1px solid rgba(246,225,206,.13)}
 .services-dropdown-panel a:last-child {border:0}
@@ -399,6 +402,27 @@ body {overflow-x:clip;line-height:1.5}
 @media(max-width:960px){.orr-gallery-row{margin:0 34px 20px}}
 @media(max-width:620px){.orr-gallery-row{margin:0 16px 17px;grid-template-columns:1fr}.orr-gallery-photo{aspect-ratio:16/10}.orr-gallery-note{padding:23px}.orr-gallery-note h4{font-size:24px}}
 @media(prefers-reduced-motion:reduce){.orr-gallery-photo img{transition:none}}
+
+/* V7: full accommodation photo gallery */
+.orr-gallery-block{margin:0 49px 26px;padding:24px 24px 26px;border:1px solid #6b5545;background:linear-gradient(180deg,#2b231d 0%,#231c17 100%)}
+.orr-gallery-intro{max-width:760px;margin:0 0 22px}
+.orr-gallery-intro h4{font:700 clamp(22px,2.1vw,30px)/1.14 Georgia,serif;color:#fff0dc;margin:8px 0 12px}
+.orr-gallery-intro p:not(.minor){font-size:14px;line-height:1.68;color:#d7c6b2;margin:0}
+.orr-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.orr-gallery-item{position:relative;border:0;padding:0;background:#14100d;overflow:hidden;display:block;cursor:zoom-in;min-width:0;aspect-ratio:4/3;border-radius:2px}
+.orr-gallery-item.featured{grid-column:span 2;aspect-ratio:16/9}
+.orr-gallery-item img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .25s ease,filter .25s ease}
+.orr-gallery-item:hover img{transform:scale(1.028);filter:saturate(1.03)}
+.orr-gallery-caption{position:absolute;left:0;right:0;bottom:0;padding:14px 14px 13px;background:linear-gradient(transparent,rgba(0,0,0,.76));color:#fff;font:700 11px/1.4 Arial,sans-serif;letter-spacing:1.1px;text-transform:uppercase;text-align:left}
+.orr-gallery-lightbox{background:#17130e;border:1px solid #6b5545;max-width:min(92vw,1280px);max-height:92vh;padding:16px;box-shadow:0 12px 70px rgba(0,0,0,.6)}
+.orr-gallery-lightbox::backdrop{background:rgba(0,0,0,.84)}
+.orr-lightbox-figure{margin:0}
+.orr-gallery-lightbox img{display:block;width:auto;max-width:100%;max-height:calc(92vh - 76px);height:auto;margin:auto}
+.orr-lightbox-caption{margin-top:12px;text-align:center;color:#e8d7c2;font:700 13px/1.5 Arial,sans-serif;letter-spacing:.4px}
+.orr-lightbox-close{position:absolute;top:5px;right:10px;background:rgba(0,0,0,.72);color:#fff;border:0;border-radius:50%;font-size:25px;line-height:1;width:34px;height:34px;cursor:pointer}
+@media(max-width:960px){.orr-gallery-block{margin:0 34px 22px;padding:22px}.orr-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.orr-gallery-item.featured{grid-column:span 2}}
+@media(max-width:620px){.orr-gallery-block{margin:0 16px 17px;padding:20px 16px}.orr-gallery-grid{grid-template-columns:1fr;gap:12px}.orr-gallery-item,.orr-gallery-item.featured{grid-column:auto;aspect-ratio:16/10}.orr-gallery-intro h4{font-size:25px}.orr-gallery-caption{font-size:10px;letter-spacing:1px;padding:13px 12px 12px}}
+@media(prefers-reduced-motion:reduce){.orr-gallery-item img{transition:none}}
 </style>
 <meta content="LinArctic Oy is a Rovaniemi-based Finnish consulting and development company working in international development, tourism services, accommodation and educational programmes." name="description"/><style>
 /* Menu alignment refinement: preserve split navigation, wordmark and services dropdown. */
@@ -451,7 +475,6 @@ body {overflow-x:clip;line-height:1.5}
  .tourism-activity{min-height:216px}
 }
 @media(max-width:650px){
- .preview-tag{display:none!important}
  .tourism-actions{gap:14px}
  .tourism-hero{display:block;min-height:0}
  .tourism-hero-photo{height:270px;min-height:270px}
@@ -471,7 +494,7 @@ body {overflow-x:clip;line-height:1.5}
 <body><a class="skip-link" href="#our-services">Skip to content</a>
 <section class="hero" id="home">
 <header class="sitehead shell">
-<div class="nav-grid"><nav aria-label="Company navigation" class="head-nav nav-left"><a href="#about">About Us</a><a href="#consulting">Consulting</a></nav><a aria-label="LinArctic Oy — back to top" class="brand" href="#home"><img alt="LinArctic — Lapland · Finland" class="brand-logo" height="180" src="assets/linarctic-approved-logo.png" width="425"/></a><nav aria-label="Primary navigation" class="head-nav nav-right"><details class="services-dropdown"><summary>Our Services <span aria-hidden="true">⌄</span></summary><div class="services-dropdown-panel"><a href="#consulting">Development Consulting</a><a href="#tourism">Tourism Services</a><a href="#accommodation">Accommodation</a><a href="#study-camp">Study Camp</a></div></details><a href="#team">Our Team</a><a href="#contact">Contact</a></nav><details class="mobile-menu"><summary aria-haspopup="true" aria-label="Open navigation menu"><span></span><span></span><span></span></summary><nav aria-label="Mobile navigation"><a href="#home">Home</a><a href="#about">About Us</a><a href="#consulting">Development Consulting</a><a href="#tourism">Tourism Services</a><a href="#accommodation">Accommodation</a><a href="#study-camp">Study Camp</a><a href="#team">Our Team</a><a href="#contact">Contact</a></nav></details></div>
+<div class="nav-grid"><nav aria-label="Company navigation" class="head-nav nav-left"><a href="#about">About Us</a><a href="#consulting">Consulting</a></nav><a aria-label="LinArctic Oy — back to top" class="brand" href="#home"><img alt="LinArctic — Lapland · Finland" class="brand-logo" height="180" src="assets/linarctic-approved-logo.png" width="425"/></a><nav aria-label="Primary navigation" class="head-nav nav-right"><details class="services-dropdown"><summary>Our Services</summary><div class="services-dropdown-panel"><a href="#consulting">Development Consulting</a><a href="#tourism">Tourism Services</a><a href="#accommodation">Accommodation</a><a href="#study-camp">Study Camp</a></div></details><a href="#team">Our Team</a><a href="#contact">Contact</a></nav><details class="mobile-menu"><summary aria-haspopup="true" aria-label="Open navigation menu"><span></span><span></span><span></span></summary><nav aria-label="Mobile navigation"><a href="#home">Home</a><a href="#about">About Us</a><a href="#consulting">Development Consulting</a><a href="#tourism">Tourism Services</a><a href="#accommodation">Accommodation</a><a href="#study-camp">Study Camp</a><a href="#team">Our Team</a><a href="#contact">Contact</a></nav></details></div>
 </header>
 <div class="hero-inner shell">
 <p class="eyebrow-script">Northern roots. International outlook.</p>
@@ -509,7 +532,22 @@ body {overflow-x:clip;line-height:1.5}
 <div><dt>Sleeping areas</dt><dd>2 <span>bedrooms + loft</span></dd></div>
 <div><dt>Toilets</dt><dd>2</dd></div>
 <div><dt>Built</dt><dd>2005</dd></div>
-</dl><div aria-label="Orrenkolo property photograph" class="orr-gallery-row"><button aria-label="Enlarge Orrenkolo cabin exterior photo" class="orr-gallery-photo" type="button"><img alt="Orrenkolo cottage in snow surrounded by pines" height="1024" loading="lazy" src="assets/orrenkolo-enhanced.webp" width="1536"/><span>View exterior photograph <span aria-hidden="true">↗</span></span></button><div class="orr-gallery-note"><p class="minor">Photo gallery</p><h4>See the cottage, inside and out.</h4><p>Explore additional room and facility photographs on Orrenkolo’s listing page.</p><a class="orr-gallery-link" href="https://www.lomarengas.fi/mokit/sodankyla-luosto-orrenkolo-8149" rel="noopener noreferrer" target="_blank">View all photos on Lomarengas <span aria-hidden="true">↗</span></a></div></div><dialog aria-label="Orrenkolo exterior photograph" class="orr-gallery-lightbox"><form method="dialog"><button aria-label="Close photograph" class="orr-lightbox-close">×</button></form><img alt="Enlarged Orrenkolo snowy cabin exterior" height="1024" src="assets/orrenkolo-enhanced.webp" width="1536"/></dialog>
+</dl>
+<div aria-label="Orrenkolo photo gallery" class="orr-gallery-block">
+<div class="orr-gallery-intro">
+<p class="minor">Photo gallery</p>
+<h4>Explore Orrenkolo room by room.</h4>
+<p>A curated gallery of the exterior, living spaces, bedrooms, sauna and practical amenities — all directly on the page.</p>
+</div>
+<div class="orr-gallery-grid"><button aria-label="Open photo: Exterior &amp; arrival" class="orr-gallery-item featured" data-alt="Orrenkolo winter exterior with driveway and garage in Luosto" data-caption="Exterior &amp; arrival" data-full="assets/orr-gallery-01.webp" type="button"><img alt="Orrenkolo winter exterior with driveway and garage in Luosto" decoding="async" height="1466" src="assets/orr-gallery-01.webp" width="2200"/><span class="orr-gallery-caption">Exterior &amp; arrival</span></button><button aria-label="Open photo: Living room" class="orr-gallery-item" data-alt="Main living room with fireplace, sofas and seating area" data-caption="Living room" data-full="assets/orr-gallery-02.webp" type="button"><img alt="Main living room with fireplace, sofas and seating area" decoding="async" height="1466" src="assets/orr-gallery-02.webp" width="2200"/><span class="orr-gallery-caption">Living room</span></button><button aria-label="Open photo: Lounge &amp; loft access" class="orr-gallery-item" data-alt="Living room with stairs, Smart TV and access to bedrooms" data-caption="Lounge &amp; loft access" data-full="assets/orr-gallery-03.webp" type="button"><img alt="Living room with stairs, Smart TV and access to bedrooms" decoding="async" height="1466" src="assets/orr-gallery-03.webp" width="2200"/><span class="orr-gallery-caption">Lounge &amp; loft access</span></button><button aria-label="Open photo: Kitchen" class="orr-gallery-item" data-alt="Open-plan kitchen with dining table and modern appliances" data-caption="Kitchen" data-full="assets/orr-gallery-04.webp" type="button"><img alt="Open-plan kitchen with dining table and modern appliances" decoding="async" height="1466" src="assets/orr-gallery-04.webp" width="2200"/><span class="orr-gallery-caption">Kitchen</span></button><button aria-label="Open photo: Dining area" class="orr-gallery-item" data-alt="Dining area beside the kitchen with seating for the group" data-caption="Dining area" data-full="assets/orr-gallery-05.webp" type="button"><img alt="Dining area beside the kitchen with seating for the group" decoding="async" height="1466" src="assets/orr-gallery-05.webp" width="2200"/><span class="orr-gallery-caption">Dining area</span></button><button aria-label="Open photo: Bedroom 1" class="orr-gallery-item" data-alt="Ground-floor bedroom with double bed and wooden interior" data-caption="Bedroom 1" data-full="assets/orr-gallery-06.webp" type="button"><img alt="Ground-floor bedroom with double bed and wooden interior" decoding="async" height="1466" src="assets/orr-gallery-06.webp" width="2200"/><span class="orr-gallery-caption">Bedroom 1</span></button><button aria-label="Open photo: Bedroom 2" class="orr-gallery-item" data-alt="Ground-floor bedroom with twin beds and patterned curtains" data-caption="Bedroom 2" data-full="assets/orr-gallery-07.webp" type="button"><img alt="Ground-floor bedroom with twin beds and patterned curtains" decoding="async" height="1466" src="assets/orr-gallery-07.webp" width="2200"/><span class="orr-gallery-caption">Bedroom 2</span></button><button aria-label="Open photo: Loft sleeping area" class="orr-gallery-item" data-alt="Loft sleeping area with large bed under the sloped timber ceiling" data-caption="Loft sleeping area" data-full="assets/orr-gallery-08.webp" type="button"><img alt="Loft sleeping area with large bed under the sloped timber ceiling" decoding="async" height="1466" src="assets/orr-gallery-08.webp" width="2200"/><span class="orr-gallery-caption">Loft sleeping area</span></button><button aria-label="Open photo: Loft twin beds" class="orr-gallery-item" data-alt="Loft area with two single beds and a red armchair" data-caption="Loft twin beds" data-full="assets/orr-gallery-09.webp" type="button"><img alt="Loft area with two single beds and a red armchair" decoding="async" height="1466" src="assets/orr-gallery-09.webp" width="2200"/><span class="orr-gallery-caption">Loft twin beds</span></button><button aria-label="Open photo: Bathroom &amp; toilet" class="orr-gallery-item" data-alt="Bathroom with toilet, sink and storage cabinets" data-caption="Bathroom &amp; toilet" data-full="assets/orr-gallery-10.webp" type="button"><img alt="Bathroom with toilet, sink and storage cabinets" decoding="async" height="1466" src="assets/orr-gallery-10.webp" width="2200"/><span class="orr-gallery-caption">Bathroom &amp; toilet</span></button><button aria-label="Open photo: Shower room" class="orr-gallery-item" data-alt="Spacious tiled shower room with bench seating" data-caption="Shower room" data-full="assets/orr-gallery-11.webp" type="button"><img alt="Spacious tiled shower room with bench seating" decoding="async" height="1466" src="assets/orr-gallery-11.webp" width="2200"/><span class="orr-gallery-caption">Shower room</span></button><button aria-label="Open photo: Changing area" class="orr-gallery-item" data-alt="Wood-lined dressing and changing area beside the sauna" data-caption="Changing area" data-full="assets/orr-gallery-12.webp" type="button"><img alt="Wood-lined dressing and changing area beside the sauna" decoding="async" height="1466" src="assets/orr-gallery-12.webp" width="2200"/><span class="orr-gallery-caption">Changing area</span></button><button aria-label="Open photo: Sauna" class="orr-gallery-item" data-alt="Traditional indoor sauna with wooden benches and heater stones" data-caption="Sauna" data-full="assets/orr-gallery-13.webp" type="button"><img alt="Traditional indoor sauna with wooden benches and heater stones" decoding="async" height="1466" src="assets/orr-gallery-13.webp" width="2200"/><span class="orr-gallery-caption">Sauna</span></button><button aria-label="Open photo: Laundry &amp; drying" class="orr-gallery-item" data-alt="Utility area with washing machine and drying cabinet" data-caption="Laundry &amp; drying" data-full="assets/orr-gallery-14.webp" type="button"><img alt="Utility area with washing machine and drying cabinet" decoding="async" height="1466" src="assets/orr-gallery-14.webp" width="2200"/><span class="orr-gallery-caption">Laundry &amp; drying</span></button></div>
+</div>
+<dialog aria-label="Orrenkolo accommodation photograph viewer" class="orr-gallery-lightbox">
+<form method="dialog"><button aria-label="Close photograph" class="orr-lightbox-close">×</button></form>
+<figure class="orr-lightbox-figure">
+<img alt="Orrenkolo winter exterior with driveway and garage in Luosto" decoding="async" height="1024" src="assets/orr-gallery-01.webp" width="1536"/>
+<figcaption class="orr-lightbox-caption">Exterior &amp; arrival</figcaption>
+</figure>
+</dialog>
 <div class="cabin-details-columns">
 <article class="cabin-card cabin-sleep">
 <p class="minor">Room to unwind</p><h4>Sleeping arrangements</h4>
@@ -605,7 +643,7 @@ body {overflow-x:clip;line-height:1.5}
   if(location.hash==='#accommodation' || location.hash==='#orrenkolo-details') setOpen(true,false);
   window.addEventListener('hashchange',()=>{if(location.hash==='#accommodation'||location.hash==='#orrenkolo-details')setOpen(true,false)});
 })();
-</script><script>(()=>{const d=document.querySelector('.orr-gallery-lightbox'),b=document.querySelector('.orr-gallery-photo');if(d&&b){b.addEventListener('click',()=>{if(typeof d.showModal==='function')d.showModal();});d.addEventListener('click',(e)=>{if(e.target===d)d.close();});}})();</script><script>
+</script><script>
 (() => {
  const panel=document.getElementById('tourism-details');
  const button=document.querySelector('.tourism-expand-button');
@@ -629,5 +667,5 @@ body {overflow-x:clip;line-height:1.5}
  if(location.hash==='#tourism' || location.hash==='#tourism-details')setOpen(true,false);
  window.addEventListener('hashchange',()=>{if(location.hash==='#tourism'||location.hash==='#tourism-details')setOpen(true,false)});
 })();
-</script></body>
+</script><script>(()=>{const dialog=document.querySelector('.orr-gallery-lightbox');const buttons=[...document.querySelectorAll('.orr-gallery-item')];if(!dialog||!buttons.length)return;const img=dialog.querySelector('img');const cap=dialog.querySelector('.orr-lightbox-caption');buttons.forEach(btn=>btn.addEventListener('click',()=>{img.src=btn.dataset.full;img.alt=btn.dataset.alt||'';cap.textContent=btn.dataset.caption||'';if(typeof dialog.showModal==='function')dialog.showModal();}));dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&dialog.open)dialog.close();});})();</script></body>
 </html>
