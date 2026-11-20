@@ -5,12 +5,16 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#191713" name="theme-color"/>
-<title>LinArctic Oy | Orrenkolo Accommodation — Preview V5.1</title>
+<title>LinArctic Oy | Tourism Services — Preview V6</title>
 <style>
 :root { --cream:#f7f0e3;--white:#fff9ed;--muted:#cec0af;--rust:#9f614b;--rustlight:#c88d6d;--dark:#201a17;--lightwood:#c3ad8e;--olive:#697c50;}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#1e1815;color:var(--cream);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
@@ -396,7 +400,74 @@ body {overflow-x:clip;line-height:1.5}
 @media(max-width:620px){.orr-gallery-row{margin:0 16px 17px;grid-template-columns:1fr}.orr-gallery-photo{aspect-ratio:16/10}.orr-gallery-note{padding:23px}.orr-gallery-note h4{font-size:24px}}
 @media(prefers-reduced-motion:reduce){.orr-gallery-photo img{transition:none}}
 </style>
-<meta content="LinArctic Oy is a Rovaniemi-based Finnish consulting and development company working in international development, tourism services, accommodation and educational programmes." name="description"/></head>
+<meta content="LinArctic Oy is a Rovaniemi-based Finnish consulting and development company working in international development, tourism services, accommodation and educational programmes." name="description"/><style>
+/* Menu alignment refinement: preserve split navigation, wordmark and services dropdown. */
+@media(min-width:1101px){
+ .nav-grid{grid-template-columns:minmax(0,1fr) 205px minmax(0,1fr);column-gap:28px}
+ .head-nav{justify-content:space-evenly;gap:clamp(22px,2.1vw,34px);padding-inline:6px}
+ .nav-left,.nav-right{justify-content:space-evenly}
+}
+</style><style>
+/* Tourism service detail: non-disruptive addition to the approved V5 design. */
+#tourism-details[hidden]{display:none!important}
+.tourism-actions{display:flex;align-items:center;flex-wrap:wrap;gap:15px 27px;margin-top:1px}
+.panel .tourism-actions>a{margin:0}
+.tourism-expand-button{padding:11px 15px;background:#c2a17e;border:1px solid #e7cbae;color:#2b1d14;font-size:11px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;line-height:1.4;min-height:45px;text-align:center;transition:background .2s ease;white-space:normal}
+.tourism-expand-button:hover,.tourism-expand-button:focus-visible{background:#eed0aa}
+.tourism-expand-arrow{margin-left:6px;font-size:16px;line-height:0;display:inline-block;vertical-align:middle}
+.tourism-details{margin-top:25px;scroll-margin-top:25px;box-shadow:0 18px 45px rgba(0,0,0,.25);border:1px solid rgba(237,214,183,.25);background:#271f19;color:#f7ebdc}
+.tourism-hero{display:grid;grid-template-columns:minmax(0,43%) minmax(0,57%);min-height:440px;background:#312922}
+.tourism-hero-photo{position:relative;min-width:0;overflow:hidden;min-height:440px}
+.tourism-hero-photo:after{content:'';position:absolute;inset:40% 0 0;background:linear-gradient(0deg,rgba(8,9,10,.65),transparent);pointer-events:none}
+.tourism-hero-photo img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 59%;}
+.tourism-photo-label{position:absolute;z-index:1;bottom:22px;left:25px;right:20px;font-weight:800;font-size:10px;text-transform:uppercase;letter-spacing:1.6px;color:#ffeed8;text-shadow:0 2px 6px rgba(0,0,0,.6)}
+.tourism-hero-text{padding:clamp(36px,5.3vw,69px);display:flex;flex-direction:column;justify-content:center;gap:0}
+.tourism-kicker{color:#d8a980!important;text-transform:uppercase;font-size:11px!important;font-weight:800;letter-spacing:2.1px;line-height:1.5;margin:0 0 17px!important}
+.tourism-hero-text h3{font:800 clamp(29px,3.2vw,43px)/1.13 Georgia,'Times New Roman',serif;max-width:450px;margin:0 0 24px;color:#fff4e5}
+.tourism-hero-text>p:not(.tourism-kicker){font:400 15px/1.75 Arial,Helvetica,sans-serif;max-width:510px;color:#e1cfb9;margin:0 0 13px}
+.tourism-hero-cta{display:inline-flex;align-items:center;justify-content:space-between;align-self:flex-start;gap:22px;margin-top:18px;padding:14px 21px;border:1px solid #d4ad87;color:#fbe3c8;font-size:11px;letter-spacing:1.5px;font-weight:800;text-transform:uppercase}
+.tourism-hero-cta:hover{background:#b77b57;color:white}
+.tourism-catalogue{padding:clamp(28px,4.2vw,56px)}
+.tourism-catalogue-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;margin-bottom:24px}
+.tourism-catalogue-intro .tourism-kicker{margin-bottom:8px!important}
+.tourism-catalogue-intro h4{font:800 clamp(26px,3vw,37px)/1.2 Georgia,serif;color:#fff4e5;margin:0}
+.tourism-catalogue-intro>p{font:italic 16px Georgia,serif;color:#c8b09b;margin:0 0 4px;text-align:right}
+.tourism-activity-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.tourism-activity{min-width:0;min-height:237px;display:flex;flex-direction:column;padding:25px 23px;background:#352a23;border:1px solid rgba(240,216,187,.2);position:relative}
+.tourism-activity-n{font:italic 22px Georgia,serif;color:#b48a68;margin-bottom:15px}
+.tourism-season{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px;color:#d1a884;min-height:19px;margin-bottom:11px}
+.tourism-activity h5{font:800 22px/1.16 Georgia,'Times New Roman',serif;color:#fff5e9;margin:0 0 12px}
+.tourism-activity p{color:#dbccb9;font-size:13.5px;line-height:1.65;margin:0}
+.tourism-footnote{display:flex;justify-content:space-between;align-items:center;gap:28px;margin-top:24px;padding-top:23px;border-top:1px solid rgba(241,214,176,.22)}
+.tourism-footnote p{font-size:12px;line-height:1.7;color:#d5c5b4;max-width:690px;margin:0}
+.tourism-footnote strong{color:#fff1dc}
+.tourism-enquire{display:inline-flex;align-items:center;gap:12px;white-space:nowrap;font-size:11px;text-transform:uppercase;font-weight:800;letter-spacing:1.25px;color:#efc3a0;border-bottom:1px solid #d6ab89;padding-bottom:7px}
+.tourism-enquire:hover{color:#fff6e7}
+@media(max-width:900px){
+ .tourism-hero{grid-template-columns:42% 58%}
+ .tourism-hero-photo,.tourism-hero{min-height:370px}
+ .tourism-hero-text{padding:30px}
+ .tourism-activity-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .tourism-activity{min-height:216px}
+}
+@media(max-width:650px){
+ .preview-tag{display:none!important}
+ .tourism-actions{gap:14px}
+ .tourism-hero{display:block;min-height:0}
+ .tourism-hero-photo{height:270px;min-height:270px}
+ .tourism-hero-photo img{object-position:center 61%}
+ .tourism-hero-text{padding:32px 24px 36px}
+ .tourism-hero-text h3{font-size:32px}
+ .tourism-catalogue{padding:30px 18px}
+ .tourism-catalogue-intro{display:block}
+ .tourism-catalogue-intro>p{margin:10px 0 0;text-align:left}
+ .tourism-activity-grid{grid-template-columns:1fr}
+ .tourism-activity{min-height:0;padding:22px}
+ .tourism-footnote{display:block}
+ .tourism-enquire{margin-top:21px}
+}
+@media(prefers-reduced-motion:reduce){.tourism-expand-button{transition:none}}
+</style></head>
 <body><a class="skip-link" href="#our-services">Skip to content</a>
 <section class="hero" id="home">
 <header class="sitehead shell">
@@ -483,8 +554,25 @@ body {overflow-x:clip;line-height:1.5}
 </section></section>
 <section class="section shell experiences-section">
 <div class="section-heading"><p class="minor">Beyond the cabin</p><h2 class="section-title rule-title">Our Experiences</h2></div>
-<div class="split-panels"><article class="panel tour" id="tourism"><div aria-hidden="true" class="ghost">N</div><p class="minor">01 · Tourism Services</p><h3>Explore the North</h3><p>Discover possibilities for travel, outdoor experiences and local services around Finnish Lapland. Activities and arrangements are tailored to each enquiry.</p><a href="#contact">Tourism Enquiries</a></article><article class="panel study" id="study-camp"><div aria-hidden="true" class="ghost">S</div><p class="minor">02 · Educational Programmes</p><h3>Study Camp Indonesia–Lapland</h3><p>An international educational programme in development for schools across Indonesia and Southeast Asia, bringing together learning, intercultural exchange and Lapland's natural environment.</p><a href="#contact">Explore Study Camp</a></article></div>
-</section>
+<div class="split-panels"><article class="panel tour" id="tourism"><div aria-hidden="true" class="ghost">N</div><p class="minor">01 · Tourism Services</p><h3>Explore the North</h3><p>Discover seasonal activities and tailored northern experiences in Finnish Lapland. Explore the possibilities and enquire about arrangements.</p><div class="tourism-actions"><button aria-controls="tourism-details" aria-expanded="false" class="tourism-expand-button" type="button">Explore Tourism Services <span aria-hidden="true" class="tourism-expand-arrow">↓</span></button><a href="#contact">Tourism Enquiries</a></div></article><article class="panel study" id="study-camp"><div aria-hidden="true" class="ghost">S</div><p class="minor">02 · Educational Programmes</p><h3>Study Camp Indonesia–Lapland</h3><p>An international educational programme in development for schools across Indonesia and Southeast Asia, bringing together learning, intercultural exchange and Lapland's natural environment.</p><a href="#contact">Explore Study Camp</a></article></div>
+<section aria-labelledby="tourism-panel-title" class="tourism-details" hidden="" id="tourism-details">
+<div class="tourism-hero">
+<div class="tourism-hero-photo"><img alt="Two people on a snowy fell at sunset, looking over a wide northern winter landscape" decoding="async" height="1448" loading="lazy" src="assets/tourism-winter-sunset.webp" width="1086"/><span class="tourism-photo-label">The northern landscape · Winter light</span></div>
+<div class="tourism-hero-text"><p class="tourism-kicker">Discover Finnish Lapland</p><h3 id="tourism-panel-title">Experiences shaped by the North.</h3><p>From quiet moments on frozen lakes to trails through northern wilderness, explore seasonal experiences around Rovaniemi and Luosto.</p><p>Tell us what you have in mind, and we can discuss suitable arrangements, including options involving local providers.</p><a class="tourism-hero-cta" href="#contact">Make an enquiry <span aria-hidden="true">↗</span></a></div>
+</div>
+<div class="tourism-catalogue">
+<div class="tourism-catalogue-intro"><div><p class="tourism-kicker">Six ways to experience Lapland</p><h4>Explore our activities</h4></div><p>Seasonal options, thoughtfully arranged.</p></div>
+<div class="tourism-activity-grid">
+<article class="tourism-activity" id="tour-snowmobiling"><span class="tourism-activity-n">01</span><span class="tourism-season">Winter experiences</span><h5>Snowmobiling</h5><p>Discover snowy landscapes by snowmobile, with routes, operator arrangements and participation requirements confirmed in advance.</p></article>
+<article class="tourism-activity" id="tour-ice-fishing"><span class="tourism-activity-n">02</span><span class="tourism-season">Winter experiences</span><h5>Ice Fishing</h5><p>Take in the peaceful northern winter on frozen waters. Location, ice safety and any applicable fishing permissions are checked beforehand.</p></article>
+<article class="tourism-activity" id="tour-santa"><span class="tourism-activity-n">03</span><span class="tourism-season">Winter &amp; festive season</span><h5>Santa Claus Visits</h5><p>Seasonal Santa Claus encounters and activities for families or groups, with format and availability discussed individually.</p></article>
+<article class="tourism-activity" id="tour-hiking"><span class="tourism-activity-n">04</span><span class="tourism-season">Nature &amp; trails</span><h5>Hiking &amp; Nature Walks</h5><p>Explore Lapland’s forests and fells on trails chosen to suit your group, the weather, and the time of year.</p></article>
+<article class="tourism-activity" id="tour-summer-fishing"><span class="tourism-activity-n">05</span><span class="tourism-season">Open-water season</span><h5>Summer Fishing</h5><p>Discover the region’s lakes and rivers. Fishing methods, access and any required permits depend on the selected waters.</p></article>
+<article class="tourism-activity" id="tour-rentals"><span class="tourism-activity-n">06</span><span class="tourism-season">Equipment &amp; extras</span><h5>Outdoor Equipment Rentals</h5><p>Ask about equipment hire for outdoor plans or a stay in Lapland. Specific items, prices and rental terms are confirmed on enquiry.</p></article>
+</div>
+<div class="tourism-footnote"><p><strong>Planning your experience?</strong> All activities are subject to availability, seasonal and weather conditions, applicable safety requirements and permits. Specific providers and inclusions are confirmed before any arrangement.</p><a class="tourism-enquire" href="#contact">Discuss your plans <span aria-hidden="true">↗</span></a></div>
+</div>
+</section></section>
 <section class="section shell" id="location"><div class="section-heading"><p class="minor">Where we are</p><h2 class="section-title rule-title">Discover Our Location</h2></div><div class="location"><img alt="Starry blue night sky above Luosto fjell and illuminated forests in the Pyhä–Luosto area" class="location-photo" src="assets/luosto-fjell.jpg"/><div class="location-panel"><p class="minor">Luosto · Finnish Lapland</p><h2>In the heart of the fell landscape.</h2><p>From the slopes of Luosto Fjell to the forests of Orresokka, this is the northern setting our cabins call home.</p></div><span class="location-small">Luosto Fjell · Pyhä–Luosto</span></div></section>
 <section class="about-strip shell" id="about"><p class="minor">About LinArctic Oy</p><h2>Local roots. International outlook.</h2><p>LinArctic Oy is a Finnish consulting and development company based in Rovaniemi, Lapland. We work in international development consulting and tourism services, combining a northern operating base with long-standing experience in Southeast Asia.</p><div class="facts"><div class="fact"><strong>Rovaniemi</strong><span>Finnish headquarters</span></div><div class="fact"><strong>20+ years</strong><span>Southeast Asian experience</span></div><div class="fact"><strong>Pyhä–Luosto</strong><span>Accommodation setting</span></div></div></section>
 <section class="section shell team-section" id="team">
@@ -517,5 +605,29 @@ body {overflow-x:clip;line-height:1.5}
   if(location.hash==='#accommodation' || location.hash==='#orrenkolo-details') setOpen(true,false);
   window.addEventListener('hashchange',()=>{if(location.hash==='#accommodation'||location.hash==='#orrenkolo-details')setOpen(true,false)});
 })();
-</script><script>(()=>{const d=document.querySelector('.orr-gallery-lightbox'),b=document.querySelector('.orr-gallery-photo');if(d&&b){b.addEventListener('click',()=>{if(typeof d.showModal==='function')d.showModal();});d.addEventListener('click',(e)=>{if(e.target===d)d.close();});}})();</script></body>
+</script><script>(()=>{const d=document.querySelector('.orr-gallery-lightbox'),b=document.querySelector('.orr-gallery-photo');if(d&&b){b.addEventListener('click',()=>{if(typeof d.showModal==='function')d.showModal();});d.addEventListener('click',(e)=>{if(e.target===d)d.close();});}})();</script><script>
+(() => {
+ const panel=document.getElementById('tourism-details');
+ const button=document.querySelector('.tourism-expand-button');
+ if(!panel || !button) return;
+ const setOpen=(open,scroll=false)=>{
+   panel.hidden=!open;
+   button.setAttribute('aria-expanded',String(open));
+   button.firstChild.nodeValue=open?'Hide Tourism Services ':'Explore Tourism Services ';
+   const arrow=button.querySelector('.tourism-expand-arrow');
+   if(arrow) arrow.textContent=open?'↑':'↓';
+   if(open && scroll) requestAnimationFrame(()=>panel.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'}));
+ };
+ button.addEventListener('click',()=>setOpen(panel.hidden,panel.hidden));
+ document.querySelectorAll('a[href="#tourism"]').forEach(link=>{
+  link.addEventListener('click',event=>{
+    event.preventDefault();
+    setOpen(true,true);
+    if(location.hash!=='#tourism') history.pushState(null,'','#tourism');
+  });
+ });
+ if(location.hash==='#tourism' || location.hash==='#tourism-details')setOpen(true,false);
+ window.addEventListener('hashchange',()=>{if(location.hash==='#tourism'||location.hash==='#tourism-details')setOpen(true,false)});
+})();
+</script></body>
 </html>
