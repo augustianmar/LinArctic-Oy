@@ -31,12 +31,14 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#191713" name="theme-color"/>
-<title>LinArctic Oy | Homepage Service Cards — Preview V14</title>
+<title>LinArctic Oy | V14.1 · Experiences Backgrounds</title>
 <style>
 :root { --cream:#f7f0e3;--white:#fff9ed;--muted:#cec0af;--rust:#9f614b;--rustlight:#c88d6d;--dark:#201a17;--lightwood:#c3ad8e;--olive:#697c50;}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#1e1815;color:var(--cream);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
@@ -644,7 +646,7 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
   background-position: var(--photo-position, center);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: .60;
+  opacity: .37;
   filter: saturate(.86) contrast(1.04);
   transform: scale(1.008);
 }
@@ -653,16 +655,16 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg,rgba(22,18,17,.54),rgba(32,23,19,.66));
+  background: linear-gradient(180deg,rgba(22,18,17,.64),rgba(32,23,19,.76));
   pointer-events: none;
 }
 .services>.service-photo:hover{background:#30241d;border-color:rgba(238,200,154,.62)}
-.services>.service-photo:hover::before{opacity:.70;filter:saturate(.9) contrast(1.04)}
+.services>.service-photo:hover::before{opacity:.47;filter:saturate(.9) contrast(1.04)}
 .services>.service-photo .service-icon {stroke:#e2b38a;position:relative;filter:drop-shadow(0 1px 2px #0007)}
 .services>.service-photo h3 {color:#fff7ec;position:relative;text-shadow:0 1px 3px #000b}
 .services>.service-photo p {color:#f1e7d9;position:relative;text-shadow:0 1px 3px #000b}
 .service-photo-consulting{--service-photo:url('assets/service-bg-consulting.webp');--photo-position:50% 52%}
-.service-photo-tourism{--service-photo:url('assets/service-bg-tourism.webp');--photo-position:56% 72%}
+.service-photo-tourism{--service-photo:url('assets/service-bg-tourism.webp');--photo-position:56% 48%}
 .service-photo-accommodation{--service-photo:url('assets/service-bg-accommodation.webp');--photo-position:55% 55%}
 .service-photo-study{--service-photo:url('assets/service-bg-study.webp');--photo-position:50% 54%}
 @media (prefers-reduced-motion:reduce){.services>.service-photo::before{transition:none}}
@@ -733,6 +735,52 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
  .tourism-enquire{margin-top:21px}
 }
 @media(prefers-reduced-motion:reduce){.tourism-expand-button{transition:none}}
+</style><style>
+/* V14.1 — Restore understated photography to the two Our Experiences cards. */
+.split-panels > .panel.tour,
+.split-panels > .panel.study { isolation:isolate; }
+.split-panels > .panel.tour::before,
+.split-panels > .panel.study::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background-repeat:no-repeat;
+  background-size:cover;
+  transition:opacity .25s ease;
+}
+.split-panels > .panel.tour::before {
+  background-image:url('assets/service-bg-tourism.webp');
+  background-position:center 58%;
+  opacity:.32;
+  filter:saturate(.70) brightness(.70) contrast(1.07);
+}
+.split-panels > .panel.study::before {
+  background-image:url('assets/service-bg-study.webp');
+  background-position:center 47%;
+  opacity:.24;
+  filter:saturate(.62) brightness(.67) contrast(1.10);
+}
+.split-panels > .panel.tour::after,
+.split-panels > .panel.study::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(24,19,16,.26) 0%,transparent 86%);
+}
+.split-panels > .panel > * { position:relative;z-index:1; }
+.split-panels > .panel > .ghost {position:absolute;z-index:1;}
+@media(max-width:720px){
+  .split-panels > .panel.tour::before {background-position:58% 58%;opacity:.26;}
+  .split-panels > .panel.study::before {background-position:55% 48%;opacity:.20;}
+}
+@media(prefers-reduced-motion:reduce){
+  .split-panels > .panel.tour::before,
+  .split-panels > .panel.study::before {transition:none;}
+}
 </style></head>
 <body><a class="skip-link" href="#our-services">Skip to content</a>
 <section class="hero" id="home">
