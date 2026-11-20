@@ -29,12 +29,14 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#191713" name="theme-color"/>
-<title>LinArctic Oy | Tourism Service Photo Cards — Preview V13.3</title>
+<title>LinArctic Oy | Homepage Service Cards — Preview V14</title>
 <style>
 :root { --cream:#f7f0e3;--white:#fff9ed;--muted:#cec0af;--rust:#9f614b;--rustlight:#c88d6d;--dark:#201a17;--lightwood:#c3ad8e;--olive:#697c50;}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#1e1815;color:var(--cream);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
@@ -624,6 +626,46 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
  .activity-more{min-width:0;width:100%}
  .activity-extra{padding:18px 23px 27px!important}
 }
+
+/* V14 — subtle photographic backgrounds for What We Do; preserve dimensions, icons, copy and links. */
+.services>.service-photo {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #30241d;
+  border: 1px solid rgba(239,211,177,.28);
+}
+.services>.service-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: var(--service-photo);
+  background-position: var(--photo-position, center);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .60;
+  filter: saturate(.86) contrast(1.04);
+  transform: scale(1.008);
+}
+.services>.service-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg,rgba(22,18,17,.54),rgba(32,23,19,.66));
+  pointer-events: none;
+}
+.services>.service-photo:hover{background:#30241d;border-color:rgba(238,200,154,.62)}
+.services>.service-photo:hover::before{opacity:.70;filter:saturate(.9) contrast(1.04)}
+.services>.service-photo .service-icon {stroke:#e2b38a;position:relative;filter:drop-shadow(0 1px 2px #0007)}
+.services>.service-photo h3 {color:#fff7ec;position:relative;text-shadow:0 1px 3px #000b}
+.services>.service-photo p {color:#f1e7d9;position:relative;text-shadow:0 1px 3px #000b}
+.service-photo-consulting{--service-photo:url('assets/service-bg-consulting.webp');--photo-position:50% 52%}
+.service-photo-tourism{--service-photo:url('assets/service-bg-tourism.webp');--photo-position:56% 72%}
+.service-photo-accommodation{--service-photo:url('assets/service-bg-accommodation.webp');--photo-position:55% 55%}
+.service-photo-study{--service-photo:url('assets/service-bg-study.webp');--photo-position:50% 54%}
+@media (prefers-reduced-motion:reduce){.services>.service-photo::before{transition:none}}
 </style>
 <meta content="LinArctic Oy is a Rovaniemi-based Finnish consulting and development company working in international development, tourism services, accommodation and educational programmes." name="description"/><style>
 /* Menu alignment refinement: preserve split navigation, wordmark and services dropdown. */
@@ -716,7 +758,7 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 <p class="minor">Welcome to LinArctic Oy</p>
 <h2 class="section-title rule-title">What We Do</h2>
 <p class="intro-text">LinArctic Oy brings together Finnish expertise, tourism in Lapland and international relationships spanning Southeast Asia. Explore our work in the North and beyond.</p>
-<div class="services"><a class="service" href="#consulting"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><circle cx="20" cy="20" r="16"></circle><path d="M5 20h30M20 4c-6 7-8 25 0 32M20 4c6 7 8 25 0 32M8 12h24M8 28h24"></path></svg><h3>Development Consulting</h3><p>Sustainable development, natural resources, energy efficiency and international cooperation.</p></a><a class="service" href="#tourism"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><circle cx="20" cy="20" r="16"></circle><path d="m25 15-5 11-5-6 10-5zM20 4v4M20 32v4M4 20h4M32 20h4"></path></svg><h3>Tourism Services</h3><p>Discover northern travel experiences and tailored tourism arrangements in Finnish Lapland.</p></a><a class="service" href="#accommodation"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><path d="M4 19 20 5l16 14M8 17v18h24V17M15 35V23h10v12M4 35h32"></path></svg><h3>Accommodation</h3><p>Cabin stays in the peaceful woodland surroundings of Luosto.</p></a><a class="service" href="#study-camp"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><path d="m3 15 17-9 17 9-17-9zM10 20v10c5 4 15 4 20 0V20M37 15v15"></path></svg><h3>Study Camp</h3><p>Educational exchange concepts connecting schools across Southeast Asia with Finnish Lapland.</p></a></div>
+<div class="services"><a class="service service-photo service-photo-consulting" href="#consulting"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><circle cx="20" cy="20" r="16"></circle><path d="M5 20h30M20 4c-6 7-8 25 0 32M20 4c6 7 8 25 0 32M8 12h24M8 28h24"></path></svg><h3>Development Consulting</h3><p>Sustainable development, natural resources, energy efficiency and international cooperation.</p></a><a class="service service-photo service-photo-tourism" href="#tourism"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><circle cx="20" cy="20" r="16"></circle><path d="m25 15-5 11-5-6 10-5zM20 4v4M20 32v4M4 20h4M32 20h4"></path></svg><h3>Tourism Services</h3><p>Discover northern travel experiences and tailored tourism arrangements in Finnish Lapland.</p></a><a class="service service-photo service-photo-accommodation" href="#accommodation"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><path d="M4 19 20 5l16 14M8 17v18h24V17M15 35V23h10v12M4 35h32"></path></svg><h3>Accommodation</h3><p>Cabin stays in the peaceful woodland surroundings of Luosto.</p></a><a class="service service-photo service-photo-study" href="#study-camp"><svg aria-hidden="true" class="service-icon" viewbox="0 0 40 40"><path d="m3 15 17-9 17 9-17-9zM10 20v10c5 4 15 4 20 0V20M37 15v15"></path></svg><h3>Study Camp</h3><p>Educational exchange concepts connecting schools across Southeast Asia with Finnish Lapland.</p></a></div>
 </section>
 <section class="section shell consulting-section" id="consulting">
 <div class="section-heading"><p class="minor">Expertise across borders</p><h2 class="section-title rule-title">International Development &amp; Consulting</h2><p class="sub">Practical expertise. Long-standing international experience.</p></div>
