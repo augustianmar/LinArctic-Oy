@@ -33,12 +33,14 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#191713" name="theme-color"/>
-<title>LinArctic Oy | V14.1 · Experiences Backgrounds</title>
+<title>LinArctic Oy | Interactive Tourism Activity Boxes — V15 Preview</title>
 <style>
 :root { --cream:#f7f0e3;--white:#fff9ed;--muted:#cec0af;--rust:#9f614b;--rustlight:#c88d6d;--dark:#201a17;--lightwood:#c3ad8e;--olive:#697c50;}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#1e1815;color:var(--cream);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
@@ -668,6 +670,178 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 .service-photo-accommodation{--service-photo:url('assets/service-bg-accommodation.webp');--photo-position:55% 55%}
 .service-photo-study{--service-photo:url('assets/service-bg-study.webp');--photo-position:50% 54%}
 @media (prefers-reduced-motion:reduce){.services>.service-photo::before{transition:none}}
+
+/* V15 — Activity selector as a compact, photographic BOX MENU.
+   Tiles are decorative backgrounds; the ORIGINAL full photographs appear
+   uncropped in the expanded details below. Keeps the site's warm style. */
+#tourism-details .tourism-activity-grid {
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:16px !important;
+  align-items:stretch !important;
+  grid-auto-rows:1fr !important;
+}
+#tourism-details .tourism-activity.activity-detail {
+  display:block !important;
+  width:auto !important;
+  min-height:0 !important;
+  overflow:visible !important;
+  align-self:stretch !important;
+  background:#33271f;
+  border:1px solid rgba(240,216,187,.32);
+  transition:border-color .2s ease,background-color .2s ease;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+#tourism-details .tourism-activity.activity-detail:not([open]) {
+  height:100% !important;
+}
+#tourism-details .tourism-activity.activity-detail:not([open]) > summary {
+  height:100% !important;
+}
+#tourism-details .tourism-activity.activity-detail:not([open]) .activity-card-content {
+  height:100% !important;
+}
+
+#tourism-details .tourism-activity.activity-detail:hover {
+  border-color:#cda582;
+  background:#403023;
+}
+#tourism-details .activity-detail>summary {
+  display:block !important;
+  position:relative;
+  isolation:isolate;
+  min-height:260px !important;
+  height:100%;
+  overflow:hidden;
+  border:0;
+  cursor:pointer;
+  background:linear-gradient(145deg,#4b3728,#312721);
+}
+#tourism-details .activity-detail>summary::before {
+  content:"";position:absolute;inset:0;z-index:-1;
+  background-image:var(--tile-photo,linear-gradient(130deg,#544334,#253c3e));
+  background-position:var(--tile-photo-pos,center);
+  background-size:cover;
+  opacity:.30;
+  transition:transform .3s ease,opacity .3s ease;
+}
+#tourism-details .activity-detail>summary::after {
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg,rgba(30,23,19,.75),rgba(30,23,19,.25)),linear-gradient(0deg,rgba(25,20,17,.45),transparent 80%);
+}
+#tourism-details .activity-detail>summary:hover::before {opacity:.40;transform:scale(1.02)}
+#tourism-details .activity-detail[open]>summary::before {opacity:.30;transform:none}
+#tourism-details .activity-detail>summary:focus-visible {outline:3px solid #f2bb90;outline-offset:-5px}
+#tourism-details .activity-card-content {
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  justify-content:flex-end !important;
+  min-height:260px;
+  height:100% !important;
+  padding:24px 26px !important;
+  color:#fff2e0;
+}
+#tourism-details .activity-card-content .tourism-activity-n {
+  font:italic 21px/1.2 Georgia,serif !important;
+  margin:0 0 8px !important;
+  color:#edbd91;
+}
+#tourism-details .activity-card-content .tourism-season {
+  min-height:0;
+  font-size:10px;line-height:1.5;
+  font-weight:800;letter-spacing:1.6px;
+  color:#f2c99f;margin-bottom:6px !important;
+}
+#tourism-details .activity-card-content h5 {
+  font:800 clamp(22px,2.1vw,28px)/1.16 Georgia,serif !important;
+  margin:0 0 9px !important;
+  color:#fff8ed;
+  text-shadow:0 1px 8px rgba(0,0,0,.32);
+}
+#tourism-details .activity-card-content p {
+  font-size:13px !important;
+  line-height:1.58 !important;
+  color:#f0e1d0;
+  margin:0;
+  max-width:none;
+  display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;overflow:hidden;
+  text-wrap:pretty;
+}
+#tourism-details .activity-more {
+  margin-top:auto !important;
+  min-width:0 !important;
+  width:100% !important;
+  border-top:1px solid rgba(248,222,198,.44);
+  padding-top:12px;
+  font-size:10px !important;letter-spacing:1.1px;
+  color:#fbe1c0;
+}
+#tourism-details .activity-more span {font-size:22px;color:#fce3c8}
+#tourism-details .activity-detail[open] {grid-column:1/-1;}
+#tourism-details .activity-detail[open]>summary,
+#tourism-details .activity-detail[open] .activity-card-content {
+  min-height:195px !important;height:auto;
+}
+#tourism-details .activity-detail[open] .activity-card-content {padding:26px 32px !important;}
+#tourism-details .activity-detail[open] .activity-card-content p {
+  display:block;overflow:visible;-webkit-line-clamp:unset;
+  font-size:14px !important;line-height:1.65 !important;
+}
+#tourism-details .activity-detail[open] .activity-more {max-width:380px}
+#tourism-details .activity-extra {
+  padding:25px 28px 29px !important;
+  background:#211b18;
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);
+  gap:27px;align-items:center;
+}
+#tourism-details .activity-extra:has(>.activity-extra-copy:only-child) {display:block;}
+#tourism-details .activity-detail-image {
+  min-height:0 !important;
+  height:auto !important;
+  background:transparent !important;
+  overflow:visible !important;
+  aspect-ratio:auto !important;
+}
+#tourism-details .activity-detail-image::before,
+#tourism-details .activity-detail-image::after {display:none !important;content:none !important}
+#tourism-details .activity-detail-image img {
+  display:block !important;
+  width:100% !important;max-width:100%;height:auto !important;
+  max-height:485px;object-fit:contain !important;
+  object-position:center !important;
+  padding:0 !important;filter:none !important;
+  transform:none !important;aspect-ratio:auto !important;
+}
+#tourism-details .activity-extra-copy {min-width:0;align-self:center;}
+#tourism-details .activity-extra-copy .activity-extra-kicker {
+  margin:0 0 9px;font-size:11px;letter-spacing:1.8px
+}
+#tourism-details .activity-extra-copy .activity-extra-kicker:not(:first-child) {margin-top:19px}
+#tourism-details .activity-extra-copy p:not(.activity-extra-kicker) {font-size:15px;line-height:1.7;color:#e4d0bd}
+#tourism-details .activity-extra-copy .activity-enquiry-link {margin-top:16px;font-size:12px}
+@media(max-width:1100px){
+ #tourism-details .tourism-activity-grid {grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+ #tourism-details .activity-detail>summary,#tourism-details .activity-card-content {min-height:250px !important}
+}
+@media(max-width:720px){
+ #tourism-details .tourism-activity-grid{gap:13px !important}
+ #tourism-details .activity-extra{grid-template-columns:1fr;gap:19px;padding:20px !important;}
+ #tourism-details .activity-detail-image img{max-height:480px}
+}
+@media(max-width:580px){
+ #tourism-details .tourism-activity-grid{grid-template-columns:1fr !important;gap:12px !important}
+ #tourism-details .activity-detail>summary,#tourism-details .activity-card-content {min-height:195px !important}
+ #tourism-details .activity-card-content {padding:21px 23px !important}
+ #tourism-details .activity-card-content h5 {font-size:25px !important}
+ #tourism-details .activity-card-content p {font-size:13px !important}
+ #tourism-details .activity-detail[open] .activity-card-content{padding:24px !important}
+ #tourism-details .activity-detail[open]>summary,#tourism-details .activity-detail[open] .activity-card-content{min-height:195px !important}
+ #tourism-details .activity-extra-copy p:not(.activity-extra-kicker){font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){
+ #tourism-details .activity-detail>summary::before{transition:none}
+}
 </style>
 <meta content="LinArctic Oy is a Rovaniemi-based Finnish consulting and development company working in international development, tourism services, accommodation and educational programmes." name="description"/><style>
 /* Menu alignment refinement: preserve split navigation, wordmark and services dropdown. */
@@ -912,9 +1086,9 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 </div>
 <div aria-labelledby="tourism-tab-winter" class="tourism-season-panel" id="tourism-panel-winter" role="tabpanel" tabindex="0">
 <div class="tourism-season-heading"><p class="tourism-kicker">Winter in Lapland</p><p>Explore snowy landscapes, frozen lakes and memorable northern experiences.</p></div>
-<div class="tourism-activity-grid" data-active-season="winter"><details class="tourism-activity activity-detail" id="tour-snowmobiling-winter">
+<div class="tourism-activity-grid" data-active-season="winter"><details class="tourism-activity activity-detail no-photo" id="tour-snowmobiling-winter">
 <summary>
-<div class="activity-photo activity-photo-pending"><svg aria-hidden="true" viewbox="0 0 90 60"><path d="M8 47l22-25 17 18 14-20 21 27" fill="none" stroke="currentColor" stroke-width="2"></path><circle cx="67" cy="14" fill="none" r="6" stroke="currentColor" stroke-width="2"></circle></svg><span>Image to be added</span></div>
+
 <div class="activity-card-content">
 <span class="tourism-activity-n">01</span>
 <span class="tourism-season">Winter experiences</span>
@@ -923,14 +1097,14 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 <div class="activity-more">Explore experience <span aria-hidden="true">+</span></div>
 </div>
 </summary>
-<div class="activity-extra">
+<div class="activity-extra"><div class="activity-extra-copy">
 <p class="activity-extra-kicker">The experience</p><p>A winter journey by snowmobile through northern landscapes, subject to local provider arrangements.</p>
 <p class="activity-extra-kicker">Before your visit</p><p>Route, guide, transport, clothing, minimum age, driving requirements and insurance must be confirmed with the operator.</p>
 <a class="activity-enquiry-link" href="#contact">Ask about this experience →</a>
-</div>
-</details><details class="tourism-activity activity-detail" id="tour-ice-fishing-winter">
+</div></div>
+</details><details class="tourism-activity activity-detail has-photo" id="tour-ice-fishing-winter" style='--tile-photo: url("assets/tourism-ice-fishing.webp");--tile-photo-pos:50% 37%'>
 <summary>
-<div class="activity-photo"><img alt="Ice fisher holding a large fish on a frozen lake" decoding="async" height="1086" src="assets/tourism-ice-fishing.webp" width="1448"/></div>
+
 <div class="activity-card-content">
 <span class="tourism-activity-n">02</span>
 <span class="tourism-season">Winter experiences</span>
@@ -939,14 +1113,14 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 <div class="activity-more">Explore experience <span aria-hidden="true">+</span></div>
 </div>
 </summary>
-<div class="activity-extra">
+<div class="activity-extra"><div class="activity-photo activity-detail-image"><img alt="Ice fisher holding a large fish on a frozen lake" decoding="async" height="1086" loading="lazy" src="assets/tourism-ice-fishing.webp" width="1448"/></div><div class="activity-extra-copy">
 <p class="activity-extra-kicker">The experience</p><p>A peaceful winter lake experience with time to learn about fishing on frozen water.</p>
 <p class="activity-extra-kicker">Before your visit</p><p>Meeting point, fishing equipment, appropriate clothing, ice conditions and permissions are confirmed before the activity.</p>
 <a class="activity-enquiry-link" href="#contact">Ask about this experience →</a>
-</div>
-</details><details class="tourism-activity activity-detail" id="tour-santa-winter">
+</div></div>
+</details><details class="tourism-activity activity-detail has-photo" id="tour-santa-winter" style='--tile-photo: url("assets/tourism-santa.webp");--tile-photo-pos:50% 35%'>
 <summary>
-<div class="activity-photo"><img alt="Mr and Mrs Claus smiling together in festive clothing" decoding="async" height="1303" src="assets/tourism-santa.webp" width="1207"/></div>
+
 <div class="activity-card-content">
 <span class="tourism-activity-n">03</span>
 <span class="tourism-season">Family experiences</span>
@@ -955,14 +1129,14 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 <div class="activity-more">Explore experience <span aria-hidden="true">+</span></div>
 </div>
 </summary>
-<div class="activity-extra">
+<div class="activity-extra"><div class="activity-photo activity-detail-image"><img alt="Mr and Mrs Claus smiling together in festive clothing" decoding="async" height="1303" loading="lazy" src="assets/tourism-santa.webp" width="1207"/></div><div class="activity-extra-copy">
 <p class="activity-extra-kicker">The experience</p><p>A personal festive encounter with Mr and Mrs Claus, with possible storytelling or seasonal activities depending on arrangements.</p>
 <p class="activity-extra-kicker">Before your visit</p><p>Visit format, location, group size, dates and any activities are agreed individually; no fixed package is promised.</p>
 <a class="activity-enquiry-link" href="#contact">Ask about this experience →</a>
-</div>
-</details><details class="tourism-activity activity-detail" id="tour-hiking-winter">
+</div></div>
+</details><details class="tourism-activity activity-detail has-photo" id="tour-hiking-winter" style='--tile-photo: url("assets/tourism-hiking-winter.webp");--tile-photo-pos:50% 42%'>
 <summary>
-<div class="activity-photo"><img alt="Winter hiker with backpack among snow-covered pines" decoding="async" height="1448" src="assets/tourism-hiking-winter.webp" width="1086"/></div>
+
 <div class="activity-card-content">
 <span class="tourism-activity-n">04</span>
 <span class="tourism-season">Winter trails</span>
@@ -971,14 +1145,14 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 <div class="activity-more">Explore experience <span aria-hidden="true">+</span></div>
 </div>
 </summary>
-<div class="activity-extra">
+<div class="activity-extra"><div class="activity-photo activity-detail-image"><img alt="Winter hiker with backpack among snow-covered pines" decoding="async" height="1448" loading="lazy" src="assets/tourism-hiking-winter.webp" width="1086"/></div><div class="activity-extra-copy">
 <p class="activity-extra-kicker">The experience</p><p>A scenic walk among snow-laden forests and the fells of Lapland, with the route tailored to conditions.</p>
 <p class="activity-extra-kicker">Before your visit</p><p>Meeting location, walking difficulty, duration, clothing, footwear and possible equipment requirements are discussed in advance.</p>
 <a class="activity-enquiry-link" href="#contact">Ask about this experience →</a>
-</div>
-</details><details class="tourism-activity activity-detail" id="tour-rentals-winter">
+</div></div>
+</details><details class="tourism-activity activity-detail no-photo" id="tour-rentals-winter">
 <summary>
-<div class="activity-photo activity-photo-pending"><svg aria-hidden="true" viewbox="0 0 90 60"><path d="M8 47l22-25 17 18 14-20 21 27" fill="none" stroke="currentColor" stroke-width="2"></path><circle cx="67" cy="14" fill="none" r="6" stroke="currentColor" stroke-width="2"></circle></svg><span>Image to be added</span></div>
+
 <div class="activity-card-content">
 <span class="tourism-activity-n">05</span>
 <span class="tourism-season">Equipment &amp; extras</span>
@@ -987,18 +1161,18 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 <div class="activity-more">Explore experience <span aria-hidden="true">+</span></div>
 </div>
 </summary>
-<div class="activity-extra">
+<div class="activity-extra"><div class="activity-extra-copy">
 <p class="activity-extra-kicker">The experience</p><p>Enquire about equipment that may be suitable for your winter outdoor plans.</p>
 <p class="activity-extra-kicker">Before your visit</p><p>Items, size, rental period, pick-up arrangements, deposits and pricing depend on equipment availability.</p>
 <a class="activity-enquiry-link" href="#contact">Ask about this experience →</a>
-</div>
+</div></div>
 </details></div>
 </div>
 <div aria-labelledby="tourism-tab-summer" class="tourism-season-panel" hidden="" id="tourism-panel-summer" role="tabpanel" tabindex="0">
 <div class="tourism-season-heading"><p class="tourism-kicker">Summer in Lapland</p><p>Explore the fells, forest trails and lakes during the open-water season.</p></div>
-<div class="tourism-activity-grid" data-active-season="summer"><details class="tourism-activity activity-detail" id="tour-hiking-summer">
+<div class="tourism-activity-grid" data-active-season="summer"><details class="tourism-activity activity-detail has-photo" id="tour-hiking-summer" style='--tile-photo: url("assets/tourism-hiking-summer.webp");--tile-photo-pos:50% 50%'>
 <summary>
-<div class="activity-photo"><img alt="Summer hike along a forest path with Luosto Fjell in the distance" decoding="async" height="1537" src="assets/tourism-hiking-summer.webp" width="2048"/></div>
+
 <div class="activity-card-content">
 <span class="tourism-activity-n">01</span>
 <span class="tourism-season">Summer trails</span>
@@ -1007,14 +1181,14 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 <div class="activity-more">Explore experience <span aria-hidden="true">+</span></div>
 </div>
 </summary>
-<div class="activity-extra">
+<div class="activity-extra"><div class="activity-photo activity-detail-image"><img alt="Summer hike along a forest path with Luosto Fjell in the distance" decoding="async" height="1537" loading="lazy" src="assets/tourism-hiking-summer.webp" width="2048"/></div><div class="activity-extra-copy">
 <p class="activity-extra-kicker">The experience</p><p>Discover the trails, forests and fell scenery around Luosto in the warmer months.</p>
 <p class="activity-extra-kicker">Before your visit</p><p>Route, difficulty, duration, meeting point, weather considerations and any guide arrangements are confirmed before a visit.</p>
 <a class="activity-enquiry-link" href="#contact">Ask about this experience →</a>
-</div>
-</details><details class="tourism-activity activity-detail" id="tour-summer-fishing-summer">
+</div></div>
+</details><details class="tourism-activity activity-detail no-photo" id="tour-summer-fishing-summer">
 <summary>
-<div class="activity-photo activity-photo-pending"><svg aria-hidden="true" viewbox="0 0 90 60"><path d="M8 47l22-25 17 18 14-20 21 27" fill="none" stroke="currentColor" stroke-width="2"></path><circle cx="67" cy="14" fill="none" r="6" stroke="currentColor" stroke-width="2"></circle></svg><span>Image to be added</span></div>
+
 <div class="activity-card-content">
 <span class="tourism-activity-n">02</span>
 <span class="tourism-season">Open-water season</span>
@@ -1023,14 +1197,14 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 <div class="activity-more">Explore experience <span aria-hidden="true">+</span></div>
 </div>
 </summary>
-<div class="activity-extra">
+<div class="activity-extra"><div class="activity-extra-copy">
 <p class="activity-extra-kicker">The experience</p><p>Explore fishing possibilities around Lapland lakes and rivers during the open-water season.</p>
 <p class="activity-extra-kicker">Before your visit</p><p>Fishing method, location, guide, equipment, licences and access rights depend on the selected water and proposed outing.</p>
 <a class="activity-enquiry-link" href="#contact">Ask about this experience →</a>
-</div>
-</details><details class="tourism-activity activity-detail" id="tour-santa-summer">
+</div></div>
+</details><details class="tourism-activity activity-detail has-photo" id="tour-santa-summer" style='--tile-photo: url("assets/tourism-santa.webp");--tile-photo-pos:50% 35%'>
 <summary>
-<div class="activity-photo"><img alt="Mr and Mrs Claus smiling together in festive clothing" decoding="async" height="1303" src="assets/tourism-santa.webp" width="1207"/></div>
+
 <div class="activity-card-content">
 <span class="tourism-activity-n">03</span>
 <span class="tourism-season">Family experiences</span>
@@ -1039,14 +1213,14 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 <div class="activity-more">Explore experience <span aria-hidden="true">+</span></div>
 </div>
 </summary>
-<div class="activity-extra">
+<div class="activity-extra"><div class="activity-photo activity-detail-image"><img alt="Mr and Mrs Claus smiling together in festive clothing" decoding="async" height="1303" loading="lazy" src="assets/tourism-santa.webp" width="1207"/></div><div class="activity-extra-copy">
 <p class="activity-extra-kicker">The experience</p><p>Ask about an arranged meeting with Mr and Mrs Claus, including possible storytelling or family activities.</p>
 <p class="activity-extra-kicker">Before your visit</p><p>Summer availability, location, activities, group sizes and visit format are confirmed individually.</p>
 <a class="activity-enquiry-link" href="#contact">Ask about this experience →</a>
-</div>
-</details><details class="tourism-activity activity-detail" id="tour-rentals-summer">
+</div></div>
+</details><details class="tourism-activity activity-detail no-photo" id="tour-rentals-summer">
 <summary>
-<div class="activity-photo activity-photo-pending"><svg aria-hidden="true" viewbox="0 0 90 60"><path d="M8 47l22-25 17 18 14-20 21 27" fill="none" stroke="currentColor" stroke-width="2"></path><circle cx="67" cy="14" fill="none" r="6" stroke="currentColor" stroke-width="2"></circle></svg><span>Image to be added</span></div>
+
 <div class="activity-card-content">
 <span class="tourism-activity-n">04</span>
 <span class="tourism-season">Equipment &amp; extras</span>
@@ -1055,11 +1229,11 @@ html[lang="fi"] .head-nav a,html[lang="fi"] .services-dropdown>summary,html[lang
 <div class="activity-more">Explore experience <span aria-hidden="true">+</span></div>
 </div>
 </summary>
-<div class="activity-extra">
+<div class="activity-extra"><div class="activity-extra-copy">
 <p class="activity-extra-kicker">The experience</p><p>Ask about outdoor equipment hire for your summer travels and nature activities.</p>
 <p class="activity-extra-kicker">Before your visit</p><p>Equipment types, availability, sizes, rental periods, collection arrangements and prices are confirmed on enquiry.</p>
 <a class="activity-enquiry-link" href="#contact">Ask about this experience →</a>
-</div>
+</div></div>
 </details></div>
 </div>
 <div class="tourism-footnote"><p><strong>Planning your experience?</strong> All activities are subject to availability, seasonal and weather conditions, applicable safety requirements and permits. Specific providers and inclusions are confirmed before any arrangement.</p><a class="tourism-enquire" href="#contact">Discuss your plans <span aria-hidden="true">↗</span></a></div>
